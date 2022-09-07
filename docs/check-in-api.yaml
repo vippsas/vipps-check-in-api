@@ -1,0 +1,116 @@
+openapi: 3.0.0
+info:
+  title: Vipps Check-In API
+  version: 1.0.0
+  description: Api to trigger a check-in in the Vipps app
+  contact:
+    name: Team Payment Experience
+    url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
+servers:
+  - url: 'https://api.vipps.no/check-in'
+    description: Vipps Check-In api
+paths:
+  /v1:
+    parameters: []
+    post:
+      summary: Initiate a check in session for a Vipps user
+      operationId: initiateCheckIn
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckInResponse'
+        '400':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckInErrorResponse'
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckInRequest'
+        description: ''
+      description: Endpoint for triggering a Vipps check-in
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
+        - $ref: '#/components/parameters/Merchant-Serial-Number'
+      tags:
+        - check-in
+components:
+  schemas:
+    CheckInRequest:
+      title: CheckInRequest
+      type: object
+      description: ''
+      properties:
+        msisdn:
+          type: string
+          example: '4790909090'
+          description: MSISDN for the user
+          pattern: '^47[0-9]{8}$'
+    CheckInResponse:
+      title: CheckInResponse
+      type: object
+      x-examples: {}
+      description: ''
+    CheckInErrorResponse:
+      description: ''
+      title: CheckInErrorResponse
+      type: object
+      x-examples:
+        example-1:
+          title: MSISDN Invalid
+          detail: Not a valid telephone number
+          instance: 3cff3564-4a14-4481-8dbb-431087753eed
+        Validation error:
+          type: 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1'
+          title: One or more validation errors occurred.
+          detail: BadRequest
+          instance: 00-616e415f5af7584eb4d9369d0fe8d7cc-48b90041faff204c-00
+          invalidParams:
+            - name: MSISDN
+              reason: 'The field MSISDN must match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
+  securitySchemes:
+    BearerToken:
+      type: http
+      scheme: bearer
+  parameters:
+    Merchant-Serial-Number:
+      name: Merchant-Serial-Number
+      in: header
+      required: false
+      schema:
+        type: string
+      description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
+    Ocp-Apim-Subscription-Key:
+      name: Ocp-Apim-Subscription-Key
+      in: header
+      required: true
+      schema:
+        type: string
+      description: Subscription Key
+    Authorization:
+      name: Authorization
+      in: header
+      required: true
+      schema:
+        type: string
+      description: Bearer <access_token>
+  responses:
+    400BadRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CheckInErrorResponse'
+tags:
+  - name: check-in
+security:
+  - BearerToken: []

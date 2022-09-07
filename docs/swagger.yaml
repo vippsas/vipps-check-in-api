@@ -23,11 +23,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/CheckInResponse'
         '400':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckInErrorResponse'
+          $ref: '#/components/responses/400BadRequest'
         '401':
           description: Unauthorized
       requestBody:
@@ -60,6 +56,10 @@ components:
       type: object
       x-examples: {}
       description: ''
+      properties:
+        id:
+          type: string
+          example: '4790909090'
     CheckInErrorResponse:
       description: ''
       title: CheckInErrorResponse
@@ -77,6 +77,37 @@ components:
           invalidParams:
             - name: MSISDN
               reason: 'The field MSISDN must match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
+      properties:
+        type:
+          type: string
+          minLength: 1
+        title:
+          type: string
+          minLength: 1
+        detail:
+          type: string
+          minLength: 1
+        instance:
+          type: string
+          minLength: 1
+        invalidParams:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                minLength: 1
+              reason:
+                type: string
+                minLength: 1
+            required:
+              - name
+              - reason
+      required:
+        - title
+        - detail
+        - instance
   securitySchemes:
     BearerToken:
       type: http

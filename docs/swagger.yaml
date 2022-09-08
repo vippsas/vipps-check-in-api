@@ -53,7 +53,7 @@ components:
           pattern: '^47[0-9]{8}$'
     CheckInResponse:
       title: CheckInResponse
-      type: object
+      type: string
       x-examples: {}
       description: ''
       properties:
@@ -61,15 +61,9 @@ components:
           type: string
           example: '4790909090'
     CheckInErrorResponse:
-      description: ''
-      title: CheckInErrorResponse
       type: object
       x-examples:
         example-1:
-          title: MSISDN Invalid
-          detail: Not a valid telephone number
-          instance: 3cff3564-4a14-4481-8dbb-431087753eed
-        Validation error:
           type: 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1'
           title: One or more validation errors occurred.
           detail: BadRequest

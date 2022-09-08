@@ -23,11 +23,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/CheckInResponse'
         '400':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckInErrorResponse'
+          $ref: '#/components/responses/400BadRequest'
         '401':
           description: Unauthorized
       requestBody:
@@ -59,7 +55,11 @@ components:
       title: CheckInResponse
       type: string
       x-examples: {}
-      description: 'bla, bla'
+      description: ''
+      properties:
+        id:
+          type: string
+          example: '4790909090'
     CheckInErrorResponse:
       type: object
       x-examples:

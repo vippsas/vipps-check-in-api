@@ -57,19 +57,13 @@ components:
           pattern: '^47[0-9]{8}$'
     CheckInResponse:
       title: CheckInResponse
-      type: object
+      type: string
       x-examples: {}
-      description: ''
+      description: 'bla, bla'
     CheckInErrorResponse:
-      description: ''
-      title: CheckInErrorResponse
       type: object
       x-examples:
         example-1:
-          title: MSISDN Invalid
-          detail: Not a valid telephone number
-          instance: 3cff3564-4a14-4481-8dbb-431087753eed
-        Validation error:
           type: 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1'
           title: One or more validation errors occurred.
           detail: BadRequest
@@ -77,6 +71,37 @@ components:
           invalidParams:
             - name: MSISDN
               reason: 'The field MSISDN must match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
+      properties:
+        type:
+          type: string
+          minLength: 1
+        title:
+          type: string
+          minLength: 1
+        detail:
+          type: string
+          minLength: 1
+        instance:
+          type: string
+          minLength: 1
+        invalidParams:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                minLength: 1
+              reason:
+                type: string
+                minLength: 1
+            required:
+              - name
+              - reason
+      required:
+        - title
+        - detail
+        - instance
   securitySchemes:
     BearerToken:
       type: http

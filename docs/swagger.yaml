@@ -46,10 +46,10 @@ components:
       type: object
       description: ''
       properties:
-        msisdn:
+        phoneNumber:
           type: string
           example: '4790909090'
-          description: MSISDN for the user
+          description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
     CheckInResponse:
       title: CheckInResponse
@@ -69,8 +69,8 @@ components:
           detail: BadRequest
           instance: 00-616e415f5af7584eb4d9369d0fe8d7cc-48b90041faff204c-00
           invalidParams:
-            - name: MSISDN
-              reason: 'The field MSISDN must match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
+            - name: phoneNumber
+              reason: 'The field phoneNumber must be in MSDN format and match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
       properties:
         type:
           type: string

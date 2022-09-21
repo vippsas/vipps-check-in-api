@@ -10,7 +10,7 @@ servers:
   - url: 'https://api.vipps.no/check-in'
     description: Vipps Check-In api
 paths:
-  /v1:
+  /v1/checkin:
     parameters: []
     post:
       summary: Initiate a check in session for a Vipps user

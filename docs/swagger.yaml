@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Vipps Check-In API
-  version: 1.0.0
+  version: 1.0.1
   description: Api to trigger a check-in in the Vipps app
   contact:
     name: Team Payment Experience

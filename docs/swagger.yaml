@@ -114,6 +114,7 @@ components:
       schema:
         type: string
       description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
+      example: 123456
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
       in: header
@@ -121,6 +122,7 @@ components:
       schema:
         type: string
       description: Subscription Key
+      example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
     Authorization:
       name: Authorization
       in: header
@@ -128,6 +130,7 @@ components:
       schema:
         type: string
       description: Bearer <access_token>
+      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni
   responses:
     400BadRequest:
       description: Bad request

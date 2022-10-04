@@ -52,19 +52,19 @@ components:
           description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
           nullable: true
-        LoyaltyProgramName:
+        loyaltyProgramName:
           type: string
           minLength: 1
           description: The name of the customer loyalty program
           nullable: true
-        IsMember:
+        isMember:
           type: boolean
           description: Is the customer member of the loyalty program?
           nullable: true
       required:
         - phoneNumber
-        - LoyaltyProgramName
-        - IsMember
+        - loyaltyProgramName
+        - isMember
     LoyaltyCheckInResponse:
       title: LoyaltyCheckInResponse
       type: string
@@ -128,7 +128,7 @@ components:
       schema:
         type: string
       description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
-      example: 123456
+      example: "123456"
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
       in: header

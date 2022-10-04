@@ -13,15 +13,15 @@ paths:
   /v1/loyalty-check-in:
     parameters: []
     post:
-      summary: Initiate a check in session for a Vipps user
-      operationId: initiateCheckIn
+      summary: Initiate a loyalty check in session for a Vipps user
+      operationId: initiateLoyaltyCheckIn
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CheckInResponse'
+                $ref: '#/components/schemas/LoyaltyCheckInResponse'
         '400':
           $ref: '#/components/responses/400BadRequest'
         '401':
@@ -30,23 +30,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CheckInRequest'
-          application/xml:
-            schema:
-              type: object
-              properties:
-                LoyaltyProgramName:
-                  type: string
-                  minLength: 1
-                  description: The name of the customer loyalty program
-                  nullable: true
-                IsMember:
-                  type: boolean
-                  description: Is member of customer loyalty program?
-                  nullable: true
-              required:
-                - LoyaltyProgramName
-                - IsMember
+              $ref: '#/components/schemas/LoyaltyCheckInRequest'
         description: ''
       description: Endpoint for triggering a Vipps loyalty check-in
       parameters:
@@ -57,8 +41,8 @@ paths:
         - point-of-sale
 components:
   schemas:
-    CheckInRequest:
-      title: CheckInRequest
+    LoyaltyCheckInRequest:
+      title: LoyaltyCheckInRequest
       type: object
       description: ''
       properties:
@@ -67,8 +51,22 @@ components:
           example: '4790909090'
           description: MSISDN for the user
           pattern: '^47[0-9]{8}$'
-    CheckInResponse:
-      title: CheckInResponse
+          nullable: true
+        LoyaltyProgramName:
+          type: string
+          minLength: 1
+          description: The name of the customer loyalty program
+          nullable: true
+        IsMember:
+          type: boolean
+          description: Is the customer member of the loyalty program?
+          nullable: true
+      required:
+        - msisdn
+        - LoyaltyProgramName
+        - IsMember
+    LoyaltyCheckInResponse:
+      title: LoyaltyCheckInResponse
       type: string
       x-examples: {}
       description: ''
@@ -76,7 +74,7 @@ components:
         id:
           type: string
           example: '4790909090'
-    CheckInErrorResponse:
+    ErrorResponse:
       type: object
       x-examples:
         example-1:
@@ -150,7 +148,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CheckInErrorResponse'
+            $ref: '#/components/schemas/ErrorResponse'
 tags:
   - name: point-of-sale
 security:

@@ -1,16 +1,16 @@
 openapi: 3.0.0
 info:
-  title: Vipps Check-In API
+  title: Vipps Point of sale API
   version: 1.0.0
   description: Api to trigger a check-in in the Vipps app
   contact:
     name: Team Payment Experience
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
-  - url: 'https://api.vipps.no/check-in'
-    description: Vipps Check-In api
+  - url: 'https://api.vipps.no/point-of-sale'
+    description: Vipps Point-of-sale api
 paths:
-  /v1:
+  /v1/loyalty-check-in:
     parameters: []
     post:
       summary: Initiate a check in session for a Vipps user
@@ -31,14 +31,30 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckInRequest'
+          application/xml:
+            schema:
+              type: object
+              properties:
+                LoyaltyProgramName:
+                  type: string
+                  minLength: 1
+                  description: The name of the customer loyalty program
+                  nullable: true
+                IsMember:
+                  type: boolean
+                  description: Is member of customer loyalty program?
+                  nullable: true
+              required:
+                - LoyaltyProgramName
+                - IsMember
         description: ''
-      description: Endpoint for triggering a Vipps check-in
+      description: Endpoint for triggering a Vipps loyalty check-in
       parameters:
         - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
       tags:
-        - check-in
+        - point-of-sale
 components:
   schemas:
     CheckInRequest:
@@ -136,6 +152,6 @@ components:
           schema:
             $ref: '#/components/schemas/CheckInErrorResponse'
 tags:
-  - name: check-in
+  - name: point-of-sale
 security:
   - BearerToken: []

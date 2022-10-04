@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Vipps Point of Sale API
-  version: 1.0.0
+  version: 1.0.1
   description: Api to communicate in Point of Sale context
   contact:
     name: Team Payment Experience
@@ -46,10 +46,10 @@ components:
       type: object
       description: ''
       properties:
-        msisdn:
+        phoneNumber:
           type: string
           example: '4790909090'
-          description: MSISDN for the user
+          description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
           nullable: true
         LoyaltyProgramName:
@@ -83,8 +83,8 @@ components:
           detail: BadRequest
           instance: 00-616e415f5af7584eb4d9369d0fe8d7cc-48b90041faff204c-00
           invalidParams:
-            - name: MSISDN
-              reason: 'The field MSISDN must match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
+            - name: phoneNumber
+              reason: 'The field phoneNumber must be in MSDN format and match the regular expression ''^https://[\w\.]+([\w#!:.?+=&%@\-/]+)?$''.'
       properties:
         type:
           type: string
@@ -128,6 +128,7 @@ components:
       schema:
         type: string
       description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
+      example: 123456
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
       in: header
@@ -135,6 +136,7 @@ components:
       schema:
         type: string
       description: Subscription Key
+      example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
     Authorization:
       name: Authorization
       in: header
@@ -142,6 +144,7 @@ components:
       schema:
         type: string
       description: Bearer <access_token>
+      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni
   responses:
     400BadRequest:
       description: Bad request

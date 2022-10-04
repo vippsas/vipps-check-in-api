@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  title: Vipps Point of sale API
+  title: Vipps Point of Sale API
   version: 1.0.0
-  description: Api to trigger a check-in in the Vipps app
+  description: Api to communicate in Point of Sale context
   contact:
     name: Team Payment Experience
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'

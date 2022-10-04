@@ -62,7 +62,7 @@ components:
           description: Is the customer member of the loyalty program?
           nullable: true
       required:
-        - msisdn
+        - phoneNumber
         - LoyaltyProgramName
         - IsMember
     LoyaltyCheckInResponse:

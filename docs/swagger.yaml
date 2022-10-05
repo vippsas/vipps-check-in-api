@@ -1,27 +1,27 @@
 openapi: 3.0.0
 info:
-  title: Vipps Check-In API
+  title: Vipps Point of Sale API
   version: 1.0.1
-  description: Api to trigger a check-in in the Vipps app
+  description: Api to communicate in Point of Sale context
   contact:
     name: Team Payment Experience
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
-  - url: 'https://api.vipps.no/check-in'
-    description: Vipps Check-In api
+  - url: 'https://api.vipps.no/point-of-sale'
+    description: Vipps Point-of-sale api
 paths:
-  /v1/checkin:
+  /v1/loyalty-check-in:
     parameters: []
     post:
-      summary: Initiate a check in session for a Vipps user
-      operationId: initiateCheckIn
+      summary: Initiate a loyalty check in session for a Vipps user
+      operationId: initiateLoyaltyCheckIn
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CheckInResponse'
+                $ref: '#/components/schemas/LoyaltyCheckInResponse'
         '400':
           $ref: '#/components/responses/400BadRequest'
         '401':
@@ -30,29 +30,48 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CheckInRequest'
+              $ref: '#/components/schemas/LoyaltyCheckInRequest'
         description: ''
-      description: Endpoint for triggering a Vipps check-in
+      description: Endpoint for triggering a Vipps loyalty check-in
       parameters:
         - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
       tags:
-        - check-in
+        - point-of-sale
 components:
   schemas:
-    CheckInRequest:
-      title: CheckInRequest
+    LoyaltyCheckInRequest:
+      title: LoyaltyCheckInRequest
       type: object
-      description: ''
+      description: Loyalty program check in request
       properties:
         phoneNumber:
           type: string
           example: '4790909090'
           description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
-    CheckInResponse:
-      title: CheckInResponse
+          nullable: true
+        loyaltyProgramName:
+          type: string
+          minLength: 1
+          description: The name of the customer loyalty program
+          nullable: true
+        isMember:
+          type: boolean
+          description: Is the customer member of the loyalty program?
+          nullable: true
+      required:
+        - phoneNumber
+        - loyaltyProgramName
+        - isMember
+      x-examples:
+        Loyalty program check in request:
+          phoneNumber: '4790909090'
+          loyaltyProgramName: Vipps pluss
+          isMember: true
+    LoyaltyCheckInResponse:
+      title: LoyaltyCheckInResponse
       type: string
       x-examples: {}
       description: ''
@@ -60,7 +79,7 @@ components:
         id:
           type: string
           example: '4790909090'
-    CheckInErrorResponse:
+    ErrorResponse:
       type: object
       x-examples:
         example-1:
@@ -114,7 +133,7 @@ components:
       schema:
         type: string
       description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
-      example: 123456
+      example: '123456'
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
       in: header
@@ -137,8 +156,8 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CheckInErrorResponse'
+            $ref: '#/components/schemas/ErrorResponse'
 tags:
-  - name: check-in
+  - name: point-of-sale
 security:
   - BearerToken: []

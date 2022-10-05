@@ -44,7 +44,7 @@ components:
     LoyaltyCheckInRequest:
       title: LoyaltyCheckInRequest
       type: object
-      description: ''
+      description: Loyalty program check in request
       properties:
         phoneNumber:
           type: string
@@ -65,6 +65,11 @@ components:
         - phoneNumber
         - loyaltyProgramName
         - isMember
+      x-examples:
+        Loyalty program check in request:
+          phoneNumber: '4790909090'
+          loyaltyProgramName: Vipps pluss
+          isMember: true
     LoyaltyCheckInResponse:
       title: LoyaltyCheckInResponse
       type: string
@@ -128,7 +133,7 @@ components:
       schema:
         type: string
       description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
-      example: "123456"
+      example: '123456'
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
       in: header

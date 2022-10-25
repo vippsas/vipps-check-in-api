@@ -6,7 +6,7 @@ hide_table_of_contents: true
 ---
 END_METADATA -->
 
-# Vipps Check-In API
+# Vipps Check-in API
 
 The Check-in API (also called "Point of Sale API") is not available yet. See the [OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in) for a sneak peek.
 

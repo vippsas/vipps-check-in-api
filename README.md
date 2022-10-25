@@ -1,8 +1,20 @@
+<!-- START_METADATA
+---
+title: Introduction
+sidebar_position: 1
+hide_table_of_contents: true
+---
+END_METADATA -->
+
 # Vipps Check-In API
-Repo documenting the check-in-api
 
-## Getting started
+The Check-In API is not available yet. See the [OpenAPI Spec](https://vippsas.github.io/vipps-check-in-api/redoc.html) for a sneak peek.
 
-Review the [Getting Started](https://github.com/vippsas/vipps-developers/blob/master/vipps-getting-started.md) pages for information about API keys, product activation, contact information, contribution guidelines, etc.
+## Questions?
 
-* [Swagger](https://vippsas.github.io/vipps-check-in-api/) or [ReDoc](https://vippsas.github.io/vipps-check-in-api/redoc.html): Check-In API Reference Specifications.
+We're always happy to help with code or other questions you might have!
+Please create an [issue](https://github.com/vippsas/vipps-check-in-api/issues),
+a [pull request](https://github.com/vippsas/vipps-check-in-api/pulls),
+or [contact us](https://github.com/vippsas/vipps-developers/blob/master/contact.md).
+
+Sign up for our [Technical newsletter for developers](https://github.com/vippsas/vipps-developers/tree/master/newsletters).

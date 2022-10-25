@@ -8,7 +8,7 @@ END_METADATA -->
 
 # Vipps Check-In API
 
-The Check-In API is not available yet. See the [OpenAPI Spec](https://vippsas.github.io/vipps-check-in-api/redoc.html) for a sneak peek.
+The Check-in API (also called "Point of Sale API") is not available yet. See the [OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in) for a sneak peek.
 
 ## Questions?
 

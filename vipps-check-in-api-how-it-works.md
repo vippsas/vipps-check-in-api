@@ -6,6 +6,8 @@ END_METADATA -->
 
 # How it works
 
+💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
+
 ## Step 1: Scan the QR code
 
 The flow begins with the customer presenting their QR code to the merchant. This can happen two ways:
@@ -23,3 +25,28 @@ Automatically trigger a Vipps Check-In to inform the customer whether or not the
 
 ![Loyalty Flow](images/pos_step_2.png)
 
+
+  
+
+
+<!-- Table of contents -->
+
+<!-- Postman collection -->
+
+## The API
+💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥  
+  
+Use this API to open a waiting screen on the endusers phone. The waiting screen can be used to enroll customers into your customer loyalty program, if your system also supports vipps login.
+### The request headers
+| Key            | Value     | Description                                                                   |
+| -------------------- | -------- |  ----------------------------------------------------------------------------- |
+| `Authorization`             | `Bearer <TOKEN>` | The access token for the API                      |
+| `Ocp-Apim-Subscription-Key`      | `YOUR-SUBSCRIPTION-KEY` |   The API-key from the Vipps portal                        |
+| `Merchant-Serial-Number`          | `YOUR-MERCHANT-ACCOUNT-NUMBER` |  The merchant serial number for the sale unit                                          |
+
+### The request body
+| Parameter            | Type     | Required | Description                                                                   |
+| -------------------- | -------- | -------- | ----------------------------------------------------------------------------- |
+| `phoneNumber`             | `string` | Y        | The phone number of the enduser, fetched via their personal QR-code                      |
+| `loyaltyProgramName`      | `string` | Y        | The name of the loyalty program. This will be shown to the enduser on the waiting screen.                        |
+| `isMember`          | `boolean` | Y        | This boolean will trigger different userflows in the app, to show them if they are already enrolled in the loayalty program or not. If this value is `true` it means they are a member, and already enrolled.                                          |

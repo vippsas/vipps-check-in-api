@@ -25,4 +25,4 @@ Please create an [issue](https://github.com/vippsas/vipps-check-in-api/issues),
 a [pull request](https://github.com/vippsas/vipps-check-in-api/pulls),
 or [contact us](https://github.com/vippsas/vipps-developers/blob/master/contact.md).
 
-Sign up for our [Technical newsletter for developers](https://github.com/vippsas/vipps-developers/tree/master/newsletters).
+Sign up for our [Technical newsletter for developers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/newsletters).

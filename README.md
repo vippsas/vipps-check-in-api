@@ -12,7 +12,7 @@ END_METADATA -->
 
 The Check in API is not available for everyone yet.
 See the
-[OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/point-of-sale)
+[OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in-api)
 for a sneak peek.
 
 ## Get Started!

@@ -6,4 +6,7 @@ END_METADATA -->
 
 # FAQ
 
-TO BE PROVIDED
+For common Vipps questions, see:
+
+* [Vipps API General FAQ](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/faqs/)
+

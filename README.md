@@ -12,7 +12,7 @@ END_METADATA -->
 
 The Check in API is not available for everyone yet.
 See the
-[OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in-api)
+[OpenAPI Spec](https://vippsas.github.io/vipps-check-in-api/redoc.html)
 for a sneak peek.
 
 ## Get Started!

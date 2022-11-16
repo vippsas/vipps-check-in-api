@@ -12,7 +12,7 @@ END_METADATA -->
 
 The Check in API is not available for everyone yet.
 See the
-[OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in-api)
+[OpenAPI Spec](https://vippsas.github.io/vipps-check-in-api/redoc.html)
 for a sneak peek.
 
 ## Get Started!
@@ -23,6 +23,6 @@ Take a look at [How it works](vipps-check-in-api-how-it-works.md).
 We're always happy to help with code or other questions you might have!
 Please create an [issue](https://github.com/vippsas/vipps-check-in-api/issues),
 a [pull request](https://github.com/vippsas/vipps-check-in-api/pulls),
-or [contact us](https://github.com/vippsas/vipps-developers/blob/master/contact.md).
+or [contact us]([https://github.com/vippsas/vipps-developers/blob/master/contact.md](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/contact)).
 
 Sign up for our [Technical newsletter for developers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/newsletters).

@@ -45,6 +45,10 @@ components:
       title: LoyaltyCheckInRequest
       type: object
       description: Loyalty program check in request
+      x-examples:
+        Loyalty program check in request:
+          phoneNumber: '4790909090'
+          isMember: true
       properties:
         phoneNumber:
           type: string
@@ -52,24 +56,13 @@ components:
           description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
           nullable: true
-        loyaltyProgramName:
-          type: string
-          minLength: 1
-          description: The name of the customer loyalty program
-          nullable: true
         isMember:
           type: boolean
           description: Is the customer member of the loyalty program?
           nullable: true
       required:
         - phoneNumber
-        - loyaltyProgramName
         - isMember
-      x-examples:
-        Loyalty program check in request:
-          phoneNumber: '4790909090'
-          loyaltyProgramName: Vipps pluss
-          isMember: true
     LoyaltyCheckInResponse:
       title: LoyaltyCheckInResponse
       type: string

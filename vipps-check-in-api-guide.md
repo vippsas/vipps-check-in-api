@@ -1,11 +1,11 @@
 <!-- START_METADATA
 ---
-title: Checklist
-sidebar_position: 40
+title: API guide
+sidebar_position: 30
 draft: true
 ---
 END_METADATA -->
 
-# Checklist
+# API guide
 
 TO BE PROVIDED

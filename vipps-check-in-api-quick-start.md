@@ -1,11 +1,11 @@
 <!-- START_METADATA
 ---
-title: Checklist
-sidebar_position: 40
+title: Quick start
+sidebar_position: 20
 draft: true
 ---
 END_METADATA -->
 
-# Checklist
+# Quick start
 
 TO BE PROVIDED

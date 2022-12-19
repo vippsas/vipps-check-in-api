@@ -1,6 +1,7 @@
 <!-- START_METADATA
 ---
-draft: true
+title: How it works
+sidebar_position: 10
 ---
 END_METADATA -->
 

@@ -1,0 +1,102 @@
+<!-- START_METADATA
+---
+title: API Guide
+sidebar_position: 30
+---
+END_METADATA -->
+
+# Vipps Check In Api version 1.0
+<!-- START_COMMENT -->
+
+ℹ️ Please use the new documentation:
+[Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
+
+<!-- END_COMMENT -->
+
+The check-in api is an interface to talk to the customers while they are waiting for something to happen when they are in a point of sale context. 
+
+API version: 1.0.0
+
+Document version 1.0.0
+
+<!-- START_TOC -->
+
+## Table of contents
+
+- [Vipps Check In Api version 1.0](#vipps-check-in-api-version-10)
+  - [Table of contents](#table-of-contents)
+  - [Before you begin](#before-you-begin)
+    - [Vipps HTTP headers](#vipps-http-headers)
+    - [Authentication](#authentication)
+      - [Loyalty check-in](#loyalty-check-in)
+  - [Merchant Enrollment](#merchant-enrollment)
+  - [Questions](#questions)
+
+<!-- END_TOC -->
+
+## Before you begin
+
+This document assumes you have signed up as a organisation with Vipps and have
+retrieved your API credentials for
+[the Vipps test environment](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/test-environment)
+from
+[portal.vipps.no](https://portal.vipps.no).
+
+### Vipps HTTP headers
+
+We strongly recommend using the standard
+[Vipps HTTP headers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/common-topics/http-headers)
+for all requests.
+
+### Authentication
+
+All Vipps API calls are authenticated with an access token and an API subscription key.
+See
+[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started#get-an-access-token)
+in the Getting started guide, for details.
+
+#### Loyalty check-in
+
+The *loyalty check-in* is a way of showing the user their membership status. This is used to keep the customers in the app, while also informing them if they are member or not.
+
+[`POST:point-of-sale/v1/loyalty-check-in`](https://vippsas.github.io/vipps-developer-docs/api/qr#operation/generateOtpQr)
+
+Headers:
+
+```json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni <snip>
+Ocp-Apim-Subscription-Key: 0f14ebcab0ec4b29ae0cb90d91b4a84a
+Accept: image/png
+Merchant-Serial-Number: 123456
+Vipps-System-Name: Acme Enterprises Ecommerce DeLuxe
+Vipps-System-Version: 3.1.2
+Vipps-System-Plugin-Name: Point Of Sale Excellence
+Vipps-System-Plugin-Version 4.5.6
+```
+
+Body:
+
+```json
+{
+  "phoneNumber": "4797979797",
+  "isMember": false
+}
+```
+
+The response will simply be a guid, which is a reference we could use for debugging.
+This will trigger the following screen in the app:
+
+![Loyalty Flow](images/loyalty_check_in_not_member.png)
+
+## Merchant Enrollment
+
+If merchants want a special name for their customer club, contact us at Vipps and we can add the name manually. The 
+
+## Questions
+
+We're always happy to help with code or other questions you might have!
+Please create an [issue](https://github.com/vippsas/vipps-qr-api/issues),
+a [pull request](https://github.com/vippsas/vipps-qr-api/pulls),
+or [contact us](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/contact).
+
+Sign up for our [Technical newsletter for developers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/newsletters).

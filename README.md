@@ -10,10 +10,8 @@ END_METADATA -->
 
 # Vipps Check in API
 
-The Check in API is not available for everyone yet.
-See the
-[OpenAPI Spec](https://vippsas.github.io/vipps-check-in-api/redoc.html)
-for a sneak peek.
+The Check in API is in beta, and is available to use for merchants that work with [Loyalty in POS](https://vippsas.github.io/vipps-developer-docs/docs/vipps-solutions/loyalty-in-pos/)
+[OpenAPI Spec](https://vippsas.github.io/vipps-developer-docs/api/check-in)
 
 ## Get Started!
 Take a look at [How it works](vipps-check-in-api-how-it-works.md).

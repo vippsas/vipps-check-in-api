@@ -1,6 +1,7 @@
 <!-- START_METADATA
 ---
-draft: true
+title: Checklist
+sidebar_position: 40
 ---
 END_METADATA -->
 

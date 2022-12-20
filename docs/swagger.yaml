@@ -139,9 +139,8 @@ components:
       schema:
         type: string
       description: |-
-        The access token is a base64-encoded string that is required for all API calls.
-        It is a JWT (JSON Web Token). The access token is fetched from the POST:/accesstoken/get endpoint.
-        It is valid for 1 hour in the test environment and 24 hours in the production environment.
+        The subscription key for your API product is available on portal.vipps.no, under the 'Utvikler' tab.
+        Keep it secret.
       example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
     Authorization:
       name: Authorization
@@ -149,7 +148,10 @@ components:
       required: true
       schema:
         type: string
-      description: Bearer <access_token>
+      description: |-
+        The access token is a base64-encoded string that is required for all API calls.
+        It is a JWT (JSON Web Token). The access token is fetched from the POST:/accesstoken/get endpoint.
+        It is valid for 1 hour in the test environment and 24 hours in the production environment.
       example: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)'
   responses:
     400BadRequest:

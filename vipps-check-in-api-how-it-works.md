@@ -1,7 +1,7 @@
 <!-- START_METADATA
 ---
 title: Checklist
-sidebar_position: 40
+sidebar_position: 10
 ---
 END_METADATA -->
 

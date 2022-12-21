@@ -11,7 +11,7 @@ END_METADATA -->
 
 ## Step 1: Scan the QR code
 
-The flow begins with the customer presenting their QR code to the merchant. This can happen two ways:
+The flow begins with the customer presenting their personal QR code in the Vipps app to the merchant. This can happen two ways:
 
 * Customer-facing scanner. The store will have a permanent customer-facing scanner and customers can scan their QR code at any time.
 * The QR code is scanned by the cashier using a wired scanner. This could happen while the cashier is scanning wares or right before the payment.

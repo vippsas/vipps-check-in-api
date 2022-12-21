@@ -5,7 +5,7 @@ sidebar_position: 30
 ---
 END_METADATA -->
 
-# Vipps Check In Api version 1.0
+# Vipps Check In API version 1.0
 <!-- START_COMMENT -->
 
 ℹ️ Please use the new documentation:
@@ -17,13 +17,11 @@ The check-in api is an interface to talk to the customers while they are waiting
 
 API version: 1.0.0
 
-Document version 1.0.0
-
 <!-- START_TOC -->
 
 ## Table of contents
 
-- [Vipps Check In Api version 1.0](#vipps-check-in-api-version-10)
+- [Vipps Check In API version 1.0](#vipps-check-in-api-version-10)
   - [Table of contents](#table-of-contents)
   - [Before you begin](#before-you-begin)
     - [Vipps HTTP headers](#vipps-http-headers)
@@ -52,7 +50,7 @@ for all requests.
 
 ### Authentication
 
-All Vipps API calls are authenticated with an access token and an API subscription key.
+All Vipps API requests are authenticated with an access token and an API subscription key.
 See
 [Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started#get-an-access-token)
 in the Getting started guide, for details.
@@ -61,10 +59,10 @@ in the Getting started guide, for details.
 
 The *loyalty check-in* is a way of showing the user their membership status. This is used to keep the customers in the app, while also informing them if they are member or not.
 
-Here is how they will look based on isMember. The merchants logo will also show here.
+Here is how they will look based on `isMember`. The merchants logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in.png)
 
-## Api example
+## API example
 
 [`POST:point-of-sale/v1/loyalty-check-in`](https://vippsas.github.io/vipps-developer-docs/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
 
@@ -82,24 +80,25 @@ Vipps-System-Plugin-Version 4.5.6
 ```
 
 ### The request body
+
 | Parameter            | Type     | Required | Description                                                                   |
 | -------------------- | -------- | -------- | ----------------------------------------------------------------------------- |
-| `phoneNumber`        | `string` | Y        | The phone number of the end user, fetched via their personal QR-code                      |
-| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app, to show them if they are already enrolled in the loyalty program or not. If this value is `true` it means they are a member, and already enrolled.                                          |
+| `phoneNumber`        | `string` | Y        | The phone number of the end user, fetched from their personal QR code                      |
+| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app, to show the user if he/she is already enrolled in the loyalty program or not. If this value is `true` it means the user is a member, and already enrolled.                                          |
 
 
 Body:
 
 ```json
 {
-  "phoneNumber": "4797979797",
+  "phoneNumber": "4791234567",
   "isMember": false
 }
 ```
 
-The response will simply be a guid, which is a reference we could use for debugging.
+The response will simply be a GUID, which is a reference that may be used for debugging.
 
-## Merchant Enrollment
+## Merchant enrollment
 
 If merchants want a special name for their customer club, contact Vipps Payment Experience team and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
 

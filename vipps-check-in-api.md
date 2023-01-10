@@ -5,7 +5,8 @@ sidebar_position: 30
 ---
 END_METADATA -->
 
-# Vipps Check In Api version 1.0
+# Vipps Check-in API
+
 <!-- START_COMMENT -->
 
 ℹ️ Please use the new documentation:
@@ -13,17 +14,15 @@ END_METADATA -->
 
 <!-- END_COMMENT -->
 
-The check-in api is an interface to talk to the customers while they are waiting for something to happen when they are in a point of sale context. 
+The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
 
 API version: 1.0.0
-
-Document version 1.0.0
 
 <!-- START_TOC -->
 
 ## Table of contents
 
-- [Vipps Check In Api version 1.0](#vipps-check-in-api-version-10)
+- [Vipps Check-in API](#vipps-check-in-api)
   - [Table of contents](#table-of-contents)
   - [Before you begin](#before-you-begin)
     - [Vipps HTTP headers](#vipps-http-headers)
@@ -38,11 +37,9 @@ Document version 1.0.0
 
 ## Before you begin
 
-This document assumes you have signed up as a organisation with Vipps and have
-retrieved your API credentials for
-[the Vipps test environment](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/test-environment)
-from
-[portal.vipps.no](https://portal.vipps.no).
+This document covers the quick steps for getting started with the Vipps Check-in API.
+You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
+[Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started).
 
 ### Vipps HTTP headers
 
@@ -64,7 +61,7 @@ The *loyalty check-in* is a way of showing the user their membership status. Thi
 Here is how they will look based on isMember. The merchants logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in.png)
 
-## Api example
+## API example
 
 [`POST:point-of-sale/v1/loyalty-check-in`](https://vippsas.github.io/vipps-developer-docs/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
 
@@ -77,27 +74,27 @@ Accept: image/png
 Merchant-Serial-Number: 123456
 Vipps-System-Name: Acme Enterprises Ecommerce DeLuxe
 Vipps-System-Version: 3.1.2
-Vipps-System-Plugin-Name: Point Of Sale Excellence
+Vipps-System-Plugin-Name: Check-in Excellence
 Vipps-System-Plugin-Version 4.5.6
 ```
 
 ### The request body
-| Parameter            | Type     | Required | Description                                                                   |
-| -------------------- | -------- | -------- | ----------------------------------------------------------------------------- |
-| `phoneNumber`        | `string` | Y        | The phone number of the end user, fetched via their personal QR-code                      |
-| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app, to show them if they are already enrolled in the loyalty program or not. If this value is `true` it means they are a member, and already enrolled.                                          |
 
+| Parameter            | Type      | Required | Description                                                          |
+| -------------------- | --------- | -------- | -------------------------------------------------------------------- |
+| `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
+| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app, to show the the user if they are already enrolled in the loyalty program or not. If this value is `true` it means they are a member, and already enrolled. |
 
 Body:
 
 ```json
 {
-  "phoneNumber": "4797979797",
+  "phoneNumber": "4791234567",
   "isMember": false
 }
 ```
 
-The response will simply be a guid, which is a reference we could use for debugging.
+The response will simply be a GUID, which is a reference that can later be used for debugging.
 
 ## Merchant Enrollment
 

@@ -1,14 +1,14 @@
 openapi: 3.0.0
 info:
-  title: Vipps Check-in API
+  title: Vipps Point of Sale API
   version: 1.0.1
-  description: 'API to communicate in to the user Point of Sale context. See the [API Guide](https://vippsas.github.io/vipps-developer-docs/api/check-in) for more information.'
+  description: Api to communicate in Point of Sale context
   contact:
     name: Team Payment Experience
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
-  - url: 'https://api.vipps.no/check-in'
-    description: Vipps Check-in API
+  - url: 'https://api.vipps.no/point-of-sale'
+    description: Vipps Point-of-sale api
 paths:
   /v1/loyalty-check-in:
     parameters: []

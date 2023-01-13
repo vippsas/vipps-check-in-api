@@ -7,18 +7,14 @@ END_METADATA -->
 
 # Vipps Check-in API
 
-<!-- START_COMMENT -->
-
-ℹ️ Please use the new documentation:
-[Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
-
-<!-- END_COMMENT -->
-
 The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
 
 API version: 1.0.0
 
-<!-- START_TOC -->
+<!-- START_COMMENT -->
+
+ℹ️ Please use the new documentation:
+[Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
 
 ## Table of contents
 
@@ -33,7 +29,7 @@ API version: 1.0.0
   - [Merchant Enrollment](#merchant-enrollment)
   - [Questions](#questions)
 
-<!-- END_TOC -->
+<!-- END_COMMENT -->
 
 ## Before you begin
 

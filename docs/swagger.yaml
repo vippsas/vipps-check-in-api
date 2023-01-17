@@ -1,14 +1,14 @@
 openapi: 3.0.0
 info:
-  title: Vipps Point of Sale API
-  version: 1.0.1
-  description: Api to communicate in Point of Sale context
+  title: Vipps Check-In API
+  version: 1.0.2
+  description: API to communicate with users in a physical point of sale context.
   contact:
-    name: Team Payment Experience
+    name: Vipps
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
-  - url: 'https://api.vipps.no/point-of-sale'
-    description: Vipps Point-of-sale api
+  - url: 'https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/contact'
+    description: Vipps Check-In API
 paths:
   /v1/loyalty-check-in:
     parameters: []
@@ -38,7 +38,7 @@ paths:
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
       tags:
-        - point-of-sale
+        - Loyalty check-in
 components:
   schemas:
     LoyaltyCheckInRequest:
@@ -47,18 +47,18 @@ components:
       description: Loyalty program check in request
       x-examples:
         Loyalty program check in request:
-          phoneNumber: '4790909090'
+          phoneNumber: '4791234567'
           isMember: true
       properties:
         phoneNumber:
           type: string
-          example: '4790909090'
+          example: '4791234567'
           description: Phone number for the user in MSISDN format.
           pattern: '^47[0-9]{8}$'
           nullable: true
         isMember:
           type: boolean
-          description: Is the customer member of the loyalty program?
+          description: Is the customer a member of the loyalty program?
           nullable: true
       required:
         - phoneNumber
@@ -71,7 +71,7 @@ components:
       properties:
         id:
           type: string
-          example: '4790909090'
+          example: '4791234567'
     ErrorResponse:
       type: object
       x-examples:
@@ -125,7 +125,12 @@ components:
       required: false
       schema:
         type: string
-      description: 'The merchant serial number (MSN) for the sale unit. Partners must always send the Merchant-Serial-Number header, and we recommend that everyone sends it, also when using the merchant''s own API keys. The Merchant-Serial-Number header can be used with all API keys, and can speed up any trouble-shooting of API problems quite a bit.'
+      description: |-
+        The merchant serial number (MSN) for the sale unit. Partners must always send
+        the Merchant-Serial-Number header, and we recommend that everyone sends it,
+        also when using the merchant's own API keys. The Merchant-Serial-Number header
+        can be used with all API keys, and can speed up any trouble-shooting of API
+        problems quite a bit.
       example: '123456'
     Ocp-Apim-Subscription-Key:
       name: Ocp-Apim-Subscription-Key
@@ -133,7 +138,9 @@ components:
       required: true
       schema:
         type: string
-      description: Subscription Key
+      description: |-
+        The subscription key for your API product is available on portal.vipps.no, under the 'Utvikler' tab.
+        Keep it secret.
       example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
     Authorization:
       name: Authorization
@@ -141,8 +148,11 @@ components:
       required: true
       schema:
         type: string
-      description: Bearer <access_token>
-      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni
+      description: |-
+        The access token is a base64-encoded string that is required for all API calls.
+        It is a JWT (JSON Web Token). The access token is fetched from the POST:/accesstoken/get endpoint.
+        It is valid for 1 hour in the test environment and 24 hours in the production environment.
+      example: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)'
   responses:
     400BadRequest:
       description: Bad request

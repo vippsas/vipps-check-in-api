@@ -5,23 +5,22 @@ sidebar_position: 30
 ---
 END_METADATA -->
 
-# Vipps Check In API version 1.0
+# Vipps Check-in API
+
+
+The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
+
+API version: 1.0.0
+
+
 <!-- START_COMMENT -->
 
 ℹ️ Please use the new documentation:
 [Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
 
-<!-- END_COMMENT -->
-
-The check-in api is an interface to talk to the customers while they are waiting for something to happen when they are in a point of sale context. 
-
-API version: 1.0.0
-
-<!-- START_TOC -->
-
 ## Table of contents
 
-- [Vipps Check In API version 1.0](#vipps-check-in-api-version-10)
+- [Vipps Check-in API](#vipps-check-in-api)
   - [Table of contents](#table-of-contents)
   - [Before you begin](#before-you-begin)
     - [Vipps HTTP headers](#vipps-http-headers)
@@ -32,15 +31,13 @@ API version: 1.0.0
   - [Merchant Enrollment](#merchant-enrollment)
   - [Questions](#questions)
 
-<!-- END_TOC -->
+<!-- END_COMMENT -->
 
 ## Before you begin
 
-This document assumes you have signed up as a organisation with Vipps and have
-retrieved your API credentials for
-[the Vipps test environment](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/test-environment)
-from
-[portal.vipps.no](https://portal.vipps.no).
+This document covers the quick steps for getting started with the Vipps Check-in API.
+You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
+[Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started).
 
 ### Vipps HTTP headers
 
@@ -81,11 +78,10 @@ Vipps-System-Plugin-Version 4.5.6
 
 ### The request body
 
-| Parameter            | Type     | Required | Description                                                                   |
-| -------------------- | -------- | -------- | ----------------------------------------------------------------------------- |
-| `phoneNumber`        | `string` | Y        | The phone number of the end user, fetched from their personal QR code                      |
-| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app, to show the user if he/she is already enrolled in the loyalty program or not. If this value is `true` it means the user is a member, and already enrolled.                                          |
-
+| Parameter            | Type      | Required | Description                                                          |
+| -------------------- | --------- | -------- | -------------------------------------------------------------------- |
+| `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
+| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app to show the the user if they are already enrolled in the loyalty program or not. If this value is `true` it means they are a member and already enrolled. |
 
 Body:
 

@@ -97,12 +97,3 @@ The response will simply be a GUID, which is a reference that may be used for de
 ## Merchant enrollment
 
 If merchants want a special name for their customer club, contact Vipps Payment Experience team and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
-
-## Questions
-
-We're always happy to help with code or other questions you might have!
-Please create an [issue](https://github.com/vippsas/vipps-check-in-api/issues),
-a [pull request](https://github.com/vippsas/vipps-check-in-api/pulls),
-or [contact us](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/contact).
-
-Sign up for our [Technical newsletter for developers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/newsletters).

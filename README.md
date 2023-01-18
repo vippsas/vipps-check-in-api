@@ -20,12 +20,6 @@ The Check-in API is in beta and is available to use for merchants that work with
 * [API Guide](vipps-check-in-api.md): Developer guide for the Vipps Check-in API.
 * [API Reference](https://vippsas.github.io/vipps-developer-docs/api/check-in): Check-in API Reference Specifications.
 
-The Check-in API is in beta and is available to use for merchants that work with
-[Loyalty in POS](https://vippsas.github.io/vipps-developer-docs/docs/vipps-solutions/loyalty-in-pos/).
-
-* [API Guide](vipps-check-in-api.md): Developer guide for the Vipps Check-in API.
-* [API Reference](https://vippsas.github.io/vipps-developer-docs/api/check-in): Check-in API Reference Specifications.
-
 ## Get Started!
 
 Take a look at [How it works](vipps-check-in-api-how-it-works.md).

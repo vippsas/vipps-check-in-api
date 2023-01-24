@@ -7,11 +7,9 @@ END_METADATA -->
 
 # Vipps Check-in API
 
-
 The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
 
 API version: 1.0.0
-
 
 <!-- START_COMMENT -->
 
@@ -29,7 +27,6 @@ API version: 1.0.0
   - [Api example](#api-example)
     - [The request body](#the-request-body)
   - [Merchant Enrollment](#merchant-enrollment)
-  - [Questions](#questions)
 
 <!-- END_COMMENT -->
 

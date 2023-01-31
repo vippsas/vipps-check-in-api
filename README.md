@@ -17,7 +17,7 @@ For example, a user can scan their personal Vipps QR code and be informed if the
 
 The Check-in API is in beta and is available to use for merchants that work with [Loyalty in POS](https://vippsas.github.io/vipps-developer-docs/docs/vipps-solutions/loyalty-in-pos).
 
-## Next steps
+## Getting started
 
 See
 [Getting Started](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started)

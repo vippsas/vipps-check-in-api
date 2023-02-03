@@ -46,7 +46,7 @@ for all requests.
 
 All Vipps API requests are authenticated with an access token and an API subscription key.
 See
-[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started#get-an-access-token)
+[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/APIs/access-token-api#get-an-access-token)
 in the Getting started guide, for details.
 
 ## Loyalty check-in

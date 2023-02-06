@@ -7,8 +7,10 @@ info:
     name: Vipps
     url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
-  - url: 'https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/contact'
-    description: Vipps Check-In API
+  - url: https://api.vipps.no
+    description: Production environment
+  - url: https://apitest.vipps.no
+    description: Merchant Test environment
 paths:
   /v1/loyalty-check-in:
     parameters: []

@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Vipps Check-In API
+  title: Vipps Check-in API
   version: 1.0.2
   description: API to communicate with users in a physical point of sale context.
   contact:
@@ -150,7 +150,9 @@ components:
         type: string
       description: |-
         The access token is a base64-encoded string that is required for all API calls.
-        It is a JWT (JSON Web Token). The access token is fetched from the POST:/accesstoken/get endpoint.
+        It is a JWT (JSON Web Token). The access token is fetched from the
+        [`POST:/accesstoken/get`](https://vippsas.github.io/vipps-developer-docs/api/access-token#tag/Authorization-Service/operation/fetchAuthorizationTokenUsingPost)
+        endpoint.
         It is valid for 1 hour in the test environment and 24 hours in the production environment.
       example: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)'
   responses:

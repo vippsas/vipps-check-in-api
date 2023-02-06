@@ -1,6 +1,6 @@
 <!-- START_METADATA
 ---
-title: API Guide
+title: API guide
 sidebar_position: 30
 ---
 END_METADATA -->
@@ -15,18 +15,6 @@ API version: 1.0.0
 
 ℹ️ Please use the new documentation:
 [Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
-
-## Table of contents
-
-- [Vipps Check-in API](#vipps-check-in-api)
-  - [Table of contents](#table-of-contents)
-  - [Before you begin](#before-you-begin)
-    - [Vipps HTTP headers](#vipps-http-headers)
-    - [Authentication](#authentication)
-  - [Loyalty check-in](#loyalty-check-in)
-  - [Api example](#api-example)
-    - [The request body](#the-request-body)
-  - [Merchant Enrollment](#merchant-enrollment)
 
 <!-- END_COMMENT -->
 
@@ -46,7 +34,7 @@ for all requests.
 
 All Vipps API requests are authenticated with an access token and an API subscription key.
 See
-[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started#get-an-access-token)
+[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/APIs/access-token-api#get-an-access-token)
 in the Getting started guide, for details.
 
 ## Loyalty check-in

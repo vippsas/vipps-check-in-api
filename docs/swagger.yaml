@@ -164,7 +164,6 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-tags:
-  - name: point-of-sale
+
 security:
   - BearerToken: []

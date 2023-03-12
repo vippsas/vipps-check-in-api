@@ -1,11 +1,15 @@
 <!-- START_METADATA
 ---
-title: API guide
+title: Check-in API guide
+sidebar_label: API guide
 sidebar_position: 30
+description: Find technical details about integrating with the Check-in API.
+pagination_prev: Null
+pagination_next: Null
 ---
 END_METADATA -->
 
-# Vipps Check-in API
+# Check-in API
 
 The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
 
@@ -14,7 +18,7 @@ API version: 1.0.0
 <!-- START_COMMENT -->
 
 ℹ️ Please use the website:
-[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs/).
+[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs/docs/APIs/check-in-api).
 
 <!-- END_COMMENT -->
 

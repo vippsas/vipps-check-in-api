@@ -1,13 +1,24 @@
 <!-- START_METADATA
 ---
-title: How it works
+title: How the Check-in API works
+sidebar_label: How it works
 sidebar_position: 10
+description: View Check-in how-it-works guide for illustrations of the main flow.
+pagination_next: null
+pagination_prev: null
 ---
 END_METADATA -->
 
-# How it works
+# How the Check-in API works
 
 💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
+
+<!-- START_COMMENT -->
+
+ℹ️ Please use the website:
+[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs/docs/APIs/check-in-api).
+
+<!-- END_COMMENT -->
 
 ## Step 1: Scan the QR code
 

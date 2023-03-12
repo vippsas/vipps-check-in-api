@@ -28,15 +28,15 @@ This document covers the quick steps for getting started with the Vipps Check-in
 You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
 [Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started).
 
-### Vipps HTTP headers
+### HTTP headers
 
-We strongly recommend using the standard
-[Vipps HTTP headers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/common-topics/http-headers)
+We strongly recommend using these standard
+[HTTP headers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/common-topics/http-headers)
 for all requests.
 
 ### Authentication
 
-All Vipps API requests are authenticated with an access token and an API subscription key.
+All API requests are authenticated with an access token and an API subscription key.
 See
 [Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/APIs/access-token-api#get-an-access-token)
 in the Getting started guide, for details.
@@ -85,4 +85,4 @@ The response will simply be a GUID, which is a reference that may be used for de
 
 ## Merchant enrollment
 
-If merchants want a special name for their customer club, contact Vipps Payment Experience team and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
+If merchants want a special name for their customer club, contact Vipps MobilePay Payment Experience team and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".

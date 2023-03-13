@@ -1,22 +1,23 @@
 <!-- START_METADATA
 ---
-title: Introduction
+title: Introduction to the Check-in API
+sidebar_label: Introduction
 sidebar_position: 1
 hide_table_of_contents: true
+description: Use the Check-in API to communicate with users through their Vipps app from the Point of Sale (POS).
 pagination_next: null
 pagination_prev: null
 ---
 END_METADATA -->
 
-# Vipps Check-in API
+# Check-in API
 
 💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
 
-
 <!-- START_COMMENT -->
 
-ℹ️ Please use the new documentation:
-[Vipps Technical Documentation](https://vippsas.github.io/vipps-developer-docs/docs/APIs/check-in-api).
+ℹ️ Please use the website:
+[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs/docs/APIs/check-in-api).
 
 <!-- END_COMMENT -->
 

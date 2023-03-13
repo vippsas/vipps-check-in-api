@@ -1,14 +1,17 @@
 <!-- START_METADATA
 ---
-sidebar_position: 50
-title: FAQ
+title: Check-in API Frequently Asked Questions
+sidebar_label: FAQ
+sidebar_position: 25
+description: Frequently asked questions for the Check-in API.
 pagination_next: null
+pagination_prev: null
 draft: true
 ---
 END_METADATA -->
 
-# FAQ
+# Frequently asked questions
 
-For common Vipps questions, see:
+For common API questions, see:
 
-* [Vipps API General FAQ](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/faqs)
+* [API General FAQ](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/faqs)

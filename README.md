@@ -29,7 +29,7 @@ The Check-in API is in beta and is available to use for merchants that work with
 ## Getting started
 
 See
-[Getting Started](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started)
+[Getting Started](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/getting-started)
 for information about API keys, product activation, how to make API calls, etc.
 
 Take a look at [How it works](vipps-check-in-api-how-it-works.md).

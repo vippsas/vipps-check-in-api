@@ -26,7 +26,7 @@ API version: 1.0.0
 
 This document covers the quick steps for getting started with the Vipps Check-in API.
 You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
-[Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/vipps-getting-started).
+[Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/getting-started).
 
 ### HTTP headers
 

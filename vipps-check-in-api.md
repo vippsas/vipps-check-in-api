@@ -18,7 +18,7 @@ API version: 1.0.0
 <!-- START_COMMENT -->
 
 ℹ️ Please use the website:
-[Vipps MobilePay Technical Documentation](https://vippsas.github.io/vipps-developer-docs/docs/APIs/check-in-api).
+[Vipps MobilePay Technical Documentation](https://developer.vippsmobilepay.com/docs/APIs/check-in-api).
 
 <!-- END_COMMENT -->
 
@@ -26,19 +26,19 @@ API version: 1.0.0
 
 This document covers the quick steps for getting started with the Vipps Check-in API.
 You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
-[Vipps Getting Started guide](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/getting-started).
+[Vipps Getting Started guide](https://developer.vippsmobilepay.com/docs/vipps-developers/getting-started).
 
 ### HTTP headers
 
 We strongly recommend using these standard
-[HTTP headers](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/common-topics/http-headers)
+[HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)
 for all requests.
 
 ### Authentication
 
 All API requests are authenticated with an access token and an API subscription key.
 See
-[Get an access token](https://vippsas.github.io/vipps-developer-docs/docs/APIs/access-token-api#get-an-access-token)
+[Get an access token](https://developer.vippsmobilepay.com/docs/APIs/access-token-api#get-an-access-token)
 in the Getting started guide, for details.
 
 ## Loyalty check-in
@@ -50,7 +50,7 @@ Here is how they will look based on `isMember`. The merchants logo will also sho
 
 ## API example
 
-[`POST:point-of-sale/v1/loyalty-check-in`](https://vippsas.github.io/vipps-developer-docs/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
+[`POST:point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
 
 Headers:
 

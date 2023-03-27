@@ -14,4 +14,4 @@ END_METADATA -->
 
 For common API questions, see:
 
-* [API General FAQ](https://vippsas.github.io/vipps-developer-docs/docs/vipps-developers/faqs)
+* [API General FAQ](https://developer.vippsmobilepay.com/docs/vipps-developers/faqs)

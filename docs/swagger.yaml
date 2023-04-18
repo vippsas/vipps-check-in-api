@@ -5,7 +5,7 @@ info:
   description: API to communicate with users in a physical point of sale context.
   contact:
     name: Vipps
-    url: 'https://vipps.no/kontakt-oss/bedrift/vipps/
+    url: 'https://vipps.no/kontakt-oss/bedrift/vipps/'
 servers:
   - url: https://api.vipps.no
     description: Production environment

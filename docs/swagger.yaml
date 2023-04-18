@@ -39,6 +39,10 @@ paths:
         - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
+        - $ref: '#/components/parameters/Vipps-System-Name'
+        - $ref: '#/components/parameters/Vipps-System-Version'
+        - $ref: '#/components/parameters/Vipps-System-Plugin-Name'
+        - $ref: '#/components/parameters/Vipps-System-Plugin-Version'
       tags:
         - Loyalty check-in
 components:
@@ -140,10 +144,54 @@ components:
       required: true
       schema:
         type: string
+        example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
       description: |-
-        The subscription key for your API product is available on portal.vipps.no, under the 'Utvikler' tab.
-        Keep it secret.
-      example: 0f14ebcab0ec4b29ae0cb90d91b4a84a
+            The subscription key for the authorization token is available on
+            portal.vipps.no, under the 'Utvikler' tab.
+            Keep it secret.
+            Vipps will never ask for it, and do not need it.
+    Vipps-System-Name:
+      name: Vipps-System-Name
+      in: header
+      description: |-
+        The name of the ecommerce solution.
+        One word in lowercase letters is good.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: woocommerce
+    Vipps-System-Version:
+      name: Vipps-System-Version
+      in: header
+      description: |-
+        The version number of the ecommerce solution.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: '5.4.0'
+    Vipps-System-Plugin-Name:
+      name: Vipps-System-Plugin-Name
+      in: header
+      description: |-
+        The name of the ecommerce plugin (if applicable).
+        One word in lowercase letters is good.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: "vipps-woocommerce"
+    Vipps-System-Plugin-Version:
+      name: Vipps-System-Plugin-Version
+      in: header
+      description: |-
+        The version number of the ecommerce plugin (if applicable).
+        See [http-headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: "1.2.1"
     Authorization:
       name: Authorization
       in: header

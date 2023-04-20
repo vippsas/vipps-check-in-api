@@ -1,4 +1,3 @@
-<!-- START_METADATA
 ---
 title: Check-in API guide
 sidebar_label: API guide
@@ -7,7 +6,6 @@ description: Find technical details about integrating with the Check-in API.
 pagination_prev: Null
 pagination_next: Null
 ---
-END_METADATA -->
 
 # Check-in API
 
@@ -15,12 +13,6 @@ The Check-in API is an interface to use in the Point Of Sale (POS) context for c
 
 API version: 1.0.0
 
-<!-- START_COMMENT -->
-
-ℹ️ Please use the website:
-[Vipps MobilePay Technical Documentation](https://developer.vippsmobilepay.com/docs/APIs/check-in-api).
-
-<!-- END_COMMENT -->
 
 ## Before you begin
 

@@ -1,4 +1,3 @@
-<!-- START_METADATA
 ---
 title: Introduction to the Check-in API
 sidebar_label: Introduction
@@ -8,18 +7,10 @@ description: Use the Check-in API to communicate with users through their Vipps 
 pagination_next: null
 pagination_prev: null
 ---
-END_METADATA -->
 
 # Check-in API
 
 💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
-
-<!-- START_COMMENT -->
-
-ℹ️ Please use the website:
-[Vipps MobilePay Technical Documentation](https://developer.vippsmobilepay.com/docs/APIs/check-in-api).
-
-<!-- END_COMMENT -->
 
 The Check-in API allows you to communicate with users through their Vipps app from the Point of Sale (POS).
 For example, a user can scan their personal Vipps QR code and be informed if they are a member of a company's loyalty program.

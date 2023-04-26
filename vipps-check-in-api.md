@@ -1,4 +1,3 @@
-<!-- START_METADATA
 ---
 title: Check-in API guide
 sidebar_label: API guide
@@ -7,7 +6,6 @@ description: Find technical details about integrating with the Check-in API.
 pagination_prev: Null
 pagination_next: Null
 ---
-END_METADATA -->
 
 # Check-in API
 
@@ -15,17 +13,11 @@ The Check-in API is an interface to use in the Point Of Sale (POS) context for c
 
 API version: 1.0.0
 
-<!-- START_COMMENT -->
-
-ℹ️ Please use the website:
-[Vipps MobilePay Technical Documentation](https://developer.vippsmobilepay.com/docs/APIs/check-in-api).
-
-<!-- END_COMMENT -->
 
 ## Before you begin
 
 This document covers the quick steps for getting started with the Vipps Check-in API.
-You must have already signed up as a organisation with Vipps and have your test credentials from the merchant portal, as described in the
+You must have already signed up as an organization with Vipps and have your test credentials from the merchant portal, as described in the
 [Vipps Getting Started guide](https://developer.vippsmobilepay.com/docs/vipps-developers/getting-started).
 
 ### HTTP headers
@@ -45,7 +37,7 @@ in the Getting started guide, for details.
 
 The *loyalty check-in* is a way of showing the user their membership status. This is used to keep the customers in the app, while also informing them if they are member or not.
 
-Here is how they will look based on `isMember`. The merchants logo will also show here.
+Here is how they will look based on `isMember`. The merchant's logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in.png)
 
 ## API example
@@ -85,4 +77,4 @@ The response will simply be a GUID, which is a reference that may be used for de
 
 ## Merchant enrollment
 
-If merchants want a special name for their customer club, contact Vipps MobilePay Payment Experience team and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
+If merchants want a special name for their customer club, contact Vipps MobilePay Payment Experience team, and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".

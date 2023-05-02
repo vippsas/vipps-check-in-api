@@ -7,9 +7,9 @@ info:
     name: Vipps MobilePay
     url: 'https://developer.vippsmobilepay.com/docs/vipps-developers/contact/'
 servers:
-  - url: https://api.vipps.no
+  - url: 'https://api.vipps.no/point-of-sale'
     description: Production environment
-  - url: https://apitest.vipps.no
+  - url: 'https://apitest.vipps.no/point-of-sale'
     description: Merchant Test environment
 paths:
   /v1/loyalty-check-in:
@@ -40,7 +40,7 @@ paths:
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
       tags:
-        - Loyalty check-in
+        - point-of-sale
 components:
   schemas:
     LoyaltyCheckInRequest:
@@ -156,7 +156,7 @@ components:
         [`POST:/accesstoken/get`](https://developer.vippsmobilepay.com/api/access-token#tag/Authorization-Service/operation/fetchAuthorizationTokenUsingPost)
         endpoint.
         It is valid for 1 hour in the test environment and 24 hours in the production environment.
-      example: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)'
+      example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)
   responses:
     400BadRequest:
       description: Bad request
@@ -164,6 +164,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
-
 security:
   - BearerToken: []
+tags:
+  - name: point-of-sale

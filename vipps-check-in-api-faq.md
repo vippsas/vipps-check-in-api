@@ -1,3 +1,4 @@
+<!-- START_METADATA
 ---
 title: Check-in API Frequently Asked Questions
 sidebar_label: FAQ
@@ -7,6 +8,7 @@ pagination_next: null
 pagination_prev: null
 draft: true
 ---
+END_METADATA -->
 
 # Frequently asked questions
 

@@ -1,3 +1,4 @@
+<!-- START_METADATA
 ---
 title: Introduction to the Check-in API
 sidebar_label: Introduction
@@ -7,6 +8,7 @@ description: Use the Check-in API to communicate with users through their Vipps 
 pagination_next: null
 pagination_prev: null
 ---
+END_METADATA -->
 
 # Check-in API
 

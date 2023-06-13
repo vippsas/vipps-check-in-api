@@ -14,7 +14,7 @@ END_METADATA -->
 
 ## Endpoints to integrate
 
-Integrate _all_ the [API endpoints](https://developer.vippsmobilepay.com/api/check-in/). For examples of requests and responses, see the [Postman collection](/tools/vipps-check-in-api-postman-collection.json) and [environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
+Integrate *all* the [API endpoints](https://developer.vippsmobilepay.com/api/check-in/). For examples of requests and responses, see the [Postman collection](/tools/vipps-check-in-api-postman-collection.json) and [environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
 
 | Endpoint | Comment |
 | ---------|---------|
@@ -33,4 +33,4 @@ Integrate _all_ the [API endpoints](https://developer.vippsmobilepay.com/api/che
 | Action                       | Comment |
 |------------------------------|-----------|
 |     Follow design guidelines | The Vipps branding must be according to the [Vipps design guidelines](https://developer.vippsmobilepay.com/docs/vipps-design-guidelines).|
-|     Educate customer support | Make sure your customer service, etc. has all the tools and information they need available in _your_ system, through the APIs listed in the first item in this checklist. Ensure that they do not need to visit [portal.vipps.no](https://portal.vipps.no) for normal work. |
+|     Educate customer support | Make sure your customer service, etc. has all the tools and information they need available in *your* system, through the APIs listed in the first item in this checklist. Ensure that they do not need to visit [portal.vipps.no](https://portal.vipps.no) for normal work. |

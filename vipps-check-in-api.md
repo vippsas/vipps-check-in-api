@@ -1,3 +1,4 @@
+<!-- START_METADATA
 ---
 title: Check-in API guide
 sidebar_label: API guide
@@ -6,13 +7,13 @@ description: Find technical details about integrating with the Check-in API.
 pagination_prev: Null
 pagination_next: Null
 ---
+END_METADATA -->
 
 # Check-in API
 
 The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
 
 API version: 1.0.0
-
 
 ## Before you begin
 
@@ -62,7 +63,7 @@ Vipps-System-Plugin-Version 4.5.6
 | Parameter            | Type      | Required | Description                                                          |
 | -------------------- | --------- | -------- | -------------------------------------------------------------------- |
 | `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
-| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app to show the the user if they are already enrolled in the loyalty program or not. If this value is `true` it means they are a member and already enrolled. |
+| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app to show whether the user is enrolled in the loyalty program. If this value is `true`, they are a member and already enrolled. |
 
 Body:
 

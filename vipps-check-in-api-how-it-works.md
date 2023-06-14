@@ -1,3 +1,4 @@
+<!-- START_METADATA
 ---
 title: How the Check-in API works
 sidebar_label: How it works
@@ -6,11 +7,11 @@ description: View Check-in how-it-works guide for illustrations of the main flow
 pagination_next: null
 pagination_prev: null
 ---
+END_METADATA -->
 
 # How the Check-in API works
 
 💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
-
 
 ## Step 1: Scan the QR code
 

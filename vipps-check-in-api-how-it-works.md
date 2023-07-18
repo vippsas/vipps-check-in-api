@@ -10,8 +10,7 @@ pagination_prev: null
 END_METADATA -->
 
 # How the Check-in API works
-
-💥 DRAFT! Unfinished work in progress. API specification changes are still coming. 💥
+To get an impression of how the check-in functionality looks and feels, check out the member flow in the [demoshop](https://demo.vipps.no/member-flow).
 
 ## Step 1: Scan the QR code
 

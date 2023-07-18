@@ -34,12 +34,14 @@ See
 [Get an access token](https://developer.vippsmobilepay.com/docs/APIs/access-token-api#get-an-access-token)
 in the Getting started guide, for details.
 
-## Loyalty check-in
+## The check-in screen
 
-The *loyalty check-in* is a way of showing the user their membership status. This is used to keep the customers in the app, while also informing them if they are member or not.
+The check-in screen is a way of showing the user their membership status. As per now, intended app behavior is to only show the check-in screen when the user is a member. This is used to keep the customers in the app, while also informing them that they are a member.
 
-Here is how they will look based on `isMember`. The merchant's logo will also show here.
-![Loyalty Flow](images/loyalty_check_in.png)
+**NB:** The check-in screen will only appear if the user has the app open.
+
+Here is how it will look for the user. The merchant's logo will also show here.
+![Loyalty Flow](images/loyalty_check_in_1.png)
 
 ## API example
 
@@ -63,14 +65,14 @@ Vipps-System-Plugin-Version 4.5.6
 | Parameter            | Type      | Required | Description                                                          |
 | -------------------- | --------- | -------- | -------------------------------------------------------------------- |
 | `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
-| `isMember`           | `boolean` | Y        | This boolean will trigger different user flows in the app to show whether the user is enrolled in the loyalty program. If this value is `true`, they are a member and already enrolled. |
+| `isMember`           | `boolean` | Y        | This boolean will determine the user flow in the app to show whether the user is enrolled in the loyalty program or not. If this value is `true`, they are a member and already enrolled, and the check-in screen will show. |
 
 Body:
 
 ```json
 {
   "phoneNumber": "4791234567",
-  "isMember": false
+  "isMember": true
 }
 ```
 
@@ -78,4 +80,4 @@ The response will simply be a GUID, which is a reference that may be used for de
 
 ## Merchant enrollment
 
-If merchants want a special name for their customer club, contact Vipps MobilePay Payment Experience team, and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
+If merchants want a special name for their customer club, contact Vipps MobilePay Shopping Experience team, and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".

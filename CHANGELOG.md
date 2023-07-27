@@ -1,6 +1,6 @@
 <!-- START_METADATA
 ---
-title: Checkin API changelog
+title: Check-in API changelog
 sidebar_label: Changelog
 sidebar_position: 200
 pagination_next: null

@@ -32,5 +32,5 @@ Integrate the [API endpoint](https://developer.vippsmobilepay.com/api/check-in/)
 
 | Action                       | Comment |
 |------------------------------|-----------|
-|     Follow design guidelines | The Vipps branding must be according to the [Vipps design guidelines](https://developer.vippsmobilepay.com/docs/vipps-design-guidelines).|
+|     Follow design guidelines | The Vipps branding must be according to the [Vipps design guidelines](https://developer.vippsmobilepay.com/docs/design-guidelines).|
 |     Educate customer support | Make sure your customer service, etc. has all the tools and information they need available in *your* system, through the APIs listed in the first item in this checklist. Ensure that they do not need to visit [portal.vipps.no](https://portal.vipps.no) for normal work. |

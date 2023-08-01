@@ -21,7 +21,7 @@ The Check-in API is still in development and is available to use for merchants t
 ## Getting started
 
 See
-[Getting Started](https://developer.vippsmobilepay.com/docs/vipps-developers/getting-started)
+[Getting Started](https://developer.vippsmobilepay.com/docs/getting-started)
 for information about API keys, product activation, how to make API calls, etc.
 
 Take a look at [How it works](vipps-check-in-api-how-it-works.md).

@@ -26,7 +26,7 @@ Integrate the [API endpoint](https://developer.vippsmobilepay.com/api/check-in/)
 |-----------------------|-----------|
 |     Handle responses | Make sure to handle the response from the check in session.|
 |     Handle errors    | Make sure to log and handle all errors. All integrations should display errors in a way that the users (customers and merchant employees/administrators) can see and understand them.|
-|     Include Vipps HTTP Headers      | Send the [Vipps HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers) in all API requests for better tracking and troubleshooting (mandatory for partners and platforms, who must send these headers as part of the checklist approval). |
+|     Include Vipps HTTP Headers      | Send the [Vipps HTTP headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers) in all API requests for better tracking and troubleshooting (mandatory for partners and platforms, who must send these headers as part of the checklist approval). |
 
 ## Avoid integration pitfalls
 

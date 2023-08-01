@@ -19,12 +19,12 @@ API version: 1.0.0
 
 This document covers the quick steps for getting started with the Vipps Check-in API.
 You must have already signed up as an organization with Vipps and have your test credentials from the merchant portal, as described in the
-[Vipps Getting Started guide](https://developer.vippsmobilepay.com/docs/vipps-developers/getting-started).
+[Vipps Getting Started guide](https://developer.vippsmobilepay.com/docs/getting-started).
 
 ### HTTP headers
 
 We strongly recommend using these standard
-[HTTP headers](https://developer.vippsmobilepay.com/docs/vipps-developers/common-topics/http-headers)
+[HTTP headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers)
 for all requests.
 
 ### Authentication

@@ -5,7 +5,7 @@ info:
   description: API to communicate with users in a physical point of sale context.
   contact:
     name: Vipps MobilePay
-    url: 'https://developer.vippsmobilepay.com/docs/vipps-developers/contact/'
+    url: 'https://developer.vippsmobilepay.com/docs/contact/'
 servers:
   - url: 'https://api.vipps.no/point-of-sale'
     description: Production environment

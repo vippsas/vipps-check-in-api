@@ -18,15 +18,11 @@ For example, a user can scan their personal Vipps QR code and be informed if the
 The Check-in API is still in development and is available to use for merchants that work with loyalty, as shown in
 [In-store using merchant scan](https://developer.vippsmobilepay.com/docs/solutions/loyalty-in-pos). Future changes to the visuals and the text shown on the check-in screen is expected to change over time.
 
-## Getting started
+## Next steps
 
-See
-[Getting Started](https://developer.vippsmobilepay.com/docs/getting-started)
-for information about API keys, product activation, how to make API calls, etc.
+* [API Guide](vipps-check-in-api.md): Learn about the Check-in API features.
+* [API Reference](https://developer.vippsmobilepay.com/api/check-in): Go straight to the endpoint specifications.
 
-Take a look at [How it works](vipps-check-in-api-how-it-works.md).
-
-Review the detailed documentation found here:
-
-* [API Guide](vipps-check-in-api.md): Developer guide for the Vipps Check-in API.
-* [API Reference](https://developer.vippsmobilepay.com/api/check-in): Check-in API Reference Specifications.
+If you're new to the platform, see
+[Getting started](https://developer.vippsmobilepay.com/docs/getting-started/)
+for information about API keys, product activation, and the test environment.

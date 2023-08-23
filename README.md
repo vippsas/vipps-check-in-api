@@ -21,7 +21,6 @@ Future changes to the visuals and the text shown on the check-in screen is expec
 
 ## Next steps
 
-* [In-store payments with customer club](https://developer.vippsmobilepay.com/docs/solutions/loyalty-in-pos): See the recommended flow with detailed examples.
 * [Quick start](vipps-check-in-api-quick-start.md): Run the basic examples in curl or Postman.
 * [API Guide](vipps-check-in-api.md): Learn about the Check-in API features.
 * [API Reference](https://developer.vippsmobilepay.com/api/check-in): Go straight to the endpoint specifications.

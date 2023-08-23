@@ -158,7 +158,4 @@ The check-in screen should show.
 
 ## Next Steps
 
-See:
-
-* [In-store payments with customer club](https://developer.vippsmobilepay.com/docs/solutions/loyalty-in-pos) for a full flow with examples.
-* [Check-in API guide](vipps-check-in-api.md) to read about the concepts and details.
+See [Check-in API guide](vipps-check-in-api.md) to read about the concepts and details.

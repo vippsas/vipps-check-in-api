@@ -39,6 +39,10 @@ paths:
         - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/Ocp-Apim-Subscription-Key'
         - $ref: '#/components/parameters/Merchant-Serial-Number'
+        - $ref: '#/components/parameters/Vipps-System-Name'
+        - $ref: '#/components/parameters/Vipps-System-Version'
+        - $ref: '#/components/parameters/Vipps-System-Plugin-Name'
+        - $ref: '#/components/parameters/Vipps-System-Plugin-Version'
       tags:
         - point-of-sale
 components:
@@ -157,6 +161,48 @@ components:
         endpoint.
         It is valid for 1 hour in the test environment and 24 hours in the production environment.
       example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni (truncated)
+    Vipps-System-Name:
+      name: Vipps-System-Name
+      in: header
+      description: |-
+        The name of the ecommerce solution.
+        One word in lowercase letters is good.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: WooCommerce
+    Vipps-System-Version:
+      name: Vipps-System-Version
+      in: header
+      description: |-
+        The version number of the ecommerce solution.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: 5.4.0
+    Vipps-System-Plugin-Name:
+      name: Vipps-System-Plugin-Name
+      in: header
+      description: |-
+        The name of the ecommerce plugin (if applicable).
+        One word in lowercase letters is good.
+        See [http-headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: woocommerce-payment
+    Vipps-System-Plugin-Version:
+      name: Vipps-System-Plugin-Version
+      in: header
+      description: |-
+        The version number of the ecommerce plugin (if applicable).
+        See [http-headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers).
+      schema:
+        type: string
+        maxLength: 30
+        example: 1.2.1
   responses:
     400BadRequest:
       description: Bad request

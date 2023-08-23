@@ -61,4 +61,5 @@ The response will simply be a GUID, which is a reference that may be used for de
 
 ## Merchant enrollment
 
-If merchants want a special name for their customer club, contact Vipps MobilePay Shopping Experience team, and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
+If merchants want a special name for their customer club, [contact us](https://developer.vippsmobilepay.com/docs/contact/),and we can add the name manually.
+If no name is set, we will use the company name in addition to "customer club".

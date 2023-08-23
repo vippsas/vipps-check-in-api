@@ -2,7 +2,9 @@ openapi: 3.0.0
 info:
   title: Vipps Check-in API
   version: 1.0.2
-  description: API to communicate with users in a physical point of sale context.
+  description: >-
+    API to communicate with users in a physical point of sale context.
+    For details, see the [API Guide](https://developer.vippsmobilepay.com/docs/APIs/check-in-api/).
   contact:
     name: Vipps MobilePay
     url: 'https://developer.vippsmobilepay.com/docs/contact/'

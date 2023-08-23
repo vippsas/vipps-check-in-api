@@ -15,24 +15,6 @@ The Check-in API is an interface to use in the Point Of Sale (POS) context for c
 
 API version: 1.0.0
 
-## Before you begin
-
-This document covers the quick steps for getting started with the Check-in API.
-You must have already signed up as an organization with Vipps MobilePay.
-
-### HTTP headers
-
-We strongly recommend using these standard
-[HTTP headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers)
-for all requests.
-
-### Authentication
-
-All API requests are authenticated with an access token and an API subscription key.
-See
-[Get an access token](https://developer.vippsmobilepay.com/docs/APIs/access-token-api#get-an-access-token)
-in the Getting started guide, for details.
-
 ## The check-in screen
 
 The check-in screen is a way of showing the user their membership status. As per now, intended app behavior is to only show the check-in screen when the user is a member. This is used to keep the customers in the app, while also informing them that they are a member.
@@ -64,7 +46,7 @@ Vipps-System-Plugin-Version 4.5.6
 | Parameter            | Type      | Required | Description                                                          |
 | -------------------- | --------- | -------- | -------------------------------------------------------------------- |
 | `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
-| `isMember`           | `boolean` | Y        | This boolean will determine the user flow in the app to show whether the user is enrolled in the loyalty program or not. If this value is `true`, they are a member and already enrolled, and the check-in screen will show. |
+| `isMember`           | `boolean` | Y        | This boolean will determine the user flow in the app to show whether the user is enrolled in the loyalty program or not. If this value is `true`, they are a member and already enrolled, and the check-in screen will show.  If the value is `false`, nothing will be shown on the screen. |
 
 Body:
 

@@ -2,7 +2,7 @@
 ---
 title: Check-in API checklist
 sidebar_label: Checklist
-sidebar_position: 20
+sidebar_position: 40
 description: Checklist for full integration with the Check-in API.
 pagination_next: null
 pagination_prev: null

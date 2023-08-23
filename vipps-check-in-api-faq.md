@@ -2,7 +2,7 @@
 ---
 title: Check-in API Frequently Asked Questions
 sidebar_label: FAQ
-sidebar_position: 25
+sidebar_position: 50
 description: Frequently asked questions for the Check-in API.
 pagination_next: null
 pagination_prev: null

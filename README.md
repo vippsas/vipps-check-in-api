@@ -20,6 +20,7 @@ The Check-in API is still in development and is available to use for merchants t
 
 ## Next steps
 
+* [Quick start](vipps-ecom-api-quick-start.md): Run the basic examples in curl or Postman.
 * [API Guide](vipps-check-in-api.md): Learn about the Check-in API features.
 * [API Reference](https://developer.vippsmobilepay.com/api/check-in): Go straight to the endpoint specifications.
 

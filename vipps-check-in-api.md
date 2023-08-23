@@ -24,9 +24,11 @@ The check-in screen is a way of showing the user their membership status. As per
 Here is how it will look for the user. The merchant's logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in_1.png)
 
-## API example
+### API example
 
+Send the
 [`POST:point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
+request to show the check-in screen in the user's Vipps app.
 
 Headers:
 
@@ -41,7 +43,7 @@ Vipps-System-Plugin-Name: acme-pos
 Vipps-System-Plugin-Version 4.5.6
 ```
 
-### The request body
+#### The request body
 
 | Parameter            | Type      | Required | Description                                                          |
 | -------------------- | --------- | -------- | -------------------------------------------------------------------- |

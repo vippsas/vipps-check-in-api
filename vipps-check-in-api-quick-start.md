@@ -144,7 +144,7 @@ curl --location 'https://apitest.vipps.no/point-of-sale/v1/loyalty-check-in' \
 -H "Vipps-System-Plugin-Version: 4.5.6" \
 -X POST \
 -d '{
-  "phoneNumber": 4796574209,
+  "phoneNumber": 4712345678,
   "isMember": true
 }'
 ```

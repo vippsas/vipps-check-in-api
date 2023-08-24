@@ -15,6 +15,7 @@ The Check-in API is an interface to use in the Point Of Sale (POS) context for c
 
 API version: 1.0.0
 
+
 ## The check-in screen
 
 The check-in screen is a way of showing the user their membership status. As per now, intended app behavior is to only show the check-in screen when the user is a member. This is used to keep the customers in the app, while also informing them that they are a member.
@@ -58,6 +59,20 @@ Body:
 ```
 
 The response will simply be a GUID, which is a reference that may be used for debugging.
+
+## Customer enrollment into loyalty program
+
+If the customer is not a member of the loyalty program, you can request to enroll them by using the
+[Login API](https://developer.vippsmobilepay.com/docs/APIs/login-api).
+
+Trigger a
+[Login flow](https://developer.vippsmobilepay.com/docs/APIs/login-api/api-guide/flows/phone-number-ciba-flows)
+to gather consent from the customer.
+The CIBA flow will send a push to the user, and once the user has finished the flow, the customer will be enrolled in the loyalty program.
+
+![Loyalty Flow](images/POS_step_3.png)
+
+See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/vipps-login-from-phone-number-api-howitworks/) for a detailed example.
 
 ## Merchant enrollment
 

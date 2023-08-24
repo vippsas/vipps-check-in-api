@@ -20,7 +20,7 @@ END_METADATA -->
 
 ## Before you begin
 
-This document covers the quick steps for getting started with the ePayment API.
+This document covers the quick steps for getting started with the Check-in API.
 You must have already signed up as an organization with Vipps MobilePay.
 
 **Important:** The examples use standard example values that you must change to

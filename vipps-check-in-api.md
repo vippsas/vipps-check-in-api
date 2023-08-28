@@ -15,24 +15,6 @@ The Check-in API is an interface to use in the Point Of Sale (POS) context for c
 
 API version: 1.0.0
 
-## Before you begin
-
-This document covers the quick steps for getting started with the Vipps Check-in API.
-You must have already signed up as an organization with Vipps and have your test credentials from the merchant portal, as described in the
-[Vipps Getting Started guide](https://developer.vippsmobilepay.com/docs/getting-started).
-
-### HTTP headers
-
-We strongly recommend using these standard
-[HTTP headers](https://developer.vippsmobilepay.com/docs/common-topics/http-headers)
-for all requests.
-
-### Authentication
-
-All API requests are authenticated with an access token and an API subscription key.
-See
-[Get an access token](https://developer.vippsmobilepay.com/docs/APIs/access-token-api#get-an-access-token)
-in the Getting started guide, for details.
 
 ## The check-in screen
 
@@ -43,9 +25,9 @@ The check-in screen is a way of showing the user their membership status. As per
 Here is how it will look for the user. The merchant's logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in_1.png)
 
-## API example
-
+Send the
 [`POST:point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
+request to show the check-in screen in the user's Vipps app.
 
 Headers:
 
@@ -60,12 +42,12 @@ Vipps-System-Plugin-Name: acme-pos
 Vipps-System-Plugin-Version 4.5.6
 ```
 
-### The request body
+The request body:
 
 | Parameter            | Type      | Required | Description                                                          |
 | -------------------- | --------- | -------- | -------------------------------------------------------------------- |
 | `phoneNumber`        | `string`  | Y        | The phone number of the end user, fetched via their personal QR-code |
-| `isMember`           | `boolean` | Y        | This boolean will determine the user flow in the app to show whether the user is enrolled in the loyalty program or not. If this value is `true`, they are a member and already enrolled, and the check-in screen will show. |
+| `isMember`           | `boolean` | Y        | This boolean will determine the user flow in the app to show whether the user is enrolled in the loyalty program or not. If this value is `true`, they are a member and already enrolled, and the check-in screen will show.  If the value is `false`, nothing will be shown on the screen. |
 
 Body:
 
@@ -78,6 +60,21 @@ Body:
 
 The response will simply be a GUID, which is a reference that may be used for debugging.
 
+## Customer enrollment into loyalty program
+
+If the customer is not a member of the loyalty program, you can request to enroll them by using the
+[Login API](https://developer.vippsmobilepay.com/docs/APIs/login-api).
+
+Trigger a
+[Login flow](https://developer.vippsmobilepay.com/docs/APIs/login-api/api-guide/flows/phone-number-ciba-flows)
+to gather consent from the customer.
+The CIBA flow will send a push to the user, and once the user has finished the flow, the customer will be enrolled in the loyalty program.
+
+![Loyalty Flow](images/POS_step_3.png)
+
+See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/vipps-login-from-phone-number-api-howitworks/) for a detailed example.
+
 ## Merchant enrollment
 
-If merchants want a special name for their customer club, contact Vipps MobilePay Shopping Experience team, and we can add the name manually. If no name is set, we will use the company name in addition to "customer club".
+If merchants want a special name for their customer club, [contact us](https://developer.vippsmobilepay.com/docs/contact/), and we can add the name manually.
+If no name is set, we will use the company name in addition to "customer club".

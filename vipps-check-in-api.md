@@ -11,7 +11,8 @@ END_METADATA -->
 
 # Check-in API
 
-The Check-in API is an interface to use in the Point Of Sale (POS) context for communicating with the customers while they are waiting for a process to be completed.
+The Check-in API enables you to send a message to the customer's Vipps app.
+This is currently only used to alert a user that they are already a member of a loyalty program.
 
 API version: 1.0.0
 

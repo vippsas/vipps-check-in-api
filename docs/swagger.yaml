@@ -30,6 +30,8 @@ paths:
           $ref: '#/components/responses/400BadRequest'
         '401':
           description: Unauthorized
+        '500':
+          description: InternalServerError. If you try to use Check-in from the Merchant Test environment, it will fail with this error.
       requestBody:
         content:
           application/json:

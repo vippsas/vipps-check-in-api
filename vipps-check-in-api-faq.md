@@ -15,3 +15,8 @@ END_METADATA -->
 For common API questions, see:
 
 * [API General FAQ](https://developer.vippsmobilepay.com/docs/faqs)
+
+## Can I use Check-in in the Merchant Test (MT) environment?
+
+It is not currently possible to test Check-in from MT.
+But, it is safe to test this in production since it does not involve moving money.

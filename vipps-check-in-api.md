@@ -24,6 +24,7 @@ The check-in screen is a way of showing the user their membership status. As per
 **NB:** The check-in screen will only appear if the user has the app open.
 
 Here is how it will look for the user. The merchant's logo will also show here.
+
 ![Loyalty Flow](images/loyalty_check_in_1.png)
 
 Send the

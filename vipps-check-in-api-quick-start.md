@@ -32,38 +32,7 @@ Be aware that these are running on the production server, <https://api.vipps.no>
 
 ### Step 1 - Setup
 
-<Tabs
-defaultValue="curl"
-groupId="sdk-choice"
-values={[
-{label: 'curl', value: 'curl'},
-{label: 'Postman', value: 'postman'},
-]}>
-<TabItem value="postman">
-
-**Please note:** To prevent your sensitive data and credentials from being synced to the Postman cloud,
-store them in the *Current Value* fields of your Postman environment.
-
-In Postman, import the following files:
-
-* [Check-in API Postman collection](/tools/vipps-check-in-api-postman-collection.json)
-* [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json)
-
-Update the *Current Value* field in your Postman environment with your own values (for help finding your keys, see
-[API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
-
-* `client_id` - Merchant key required for getting the access token.
-* `client_secret` - Merchant key required for getting the access token.
-* `Ocp-Apim-Subscription-Key` - The subscription key for making API requests.
-* `merchantSerialNumber` - The unique ID for your sales unit.
-* `internationalMobileNumber` - The MSISDN for your Vipps profile.
-* `base_url_production` - Set to: `https://api.vipps.no`.
-
-</TabItem>
-<TabItem value="curl">
-
-
-You will need these values (for help finding your keys, see
+You will need the following values (for help finding your keys, see
 [API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
 
 * `client_id` - Merchant key required for getting the access token.
@@ -71,10 +40,6 @@ You will need these values (for help finding your keys, see
 * `Ocp-Apim-Subscription-Key` - The subscription key for making API requests.
 * `merchantSerialNumber` - The unique ID for your sales unit.
 * `internationalMobileNumber` - The MSISDN for your Vipps MobilePay profile.
-* `base_url_production` - Set to: `https://api.vipps.no`.
-
-</TabItem>
-</Tabs>
 
 ### Step 2 - Authentication
 
@@ -83,36 +48,18 @@ For all the following, you will need an `access_token` from the
 [`POST:/accesstoken/get`](https://developer.vippsmobilepay.com/api/access-token#tag/Authorization-Service/operation/fetchAuthorizationTokenUsingPost).
 This provides you with access to the API.
 
-<Tabs
-defaultValue="curl"
-groupId="sdk-choice"
-values={[
-{label: 'curl', value: 'curl'},
-{label: 'Postman', value: 'postman'},
-]}>
-<TabItem value="postman">
-
-```bash
-Send request Get Access Token
-```
-
-</TabItem>
-<TabItem value="curl">
-
 ```bash
 curl https://api.vipps.no/accessToken/get \
 -H "client_id: YOUR-CLIENT-ID" \
 -H "client_secret: YOUR-CLIENT-SECRET" \
 -H "Ocp-Apim-Subscription-Key: YOUR-SUBSCRIPTION-KEY" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -X POST \
 --data ''
 ```
 
-</TabItem>
-</Tabs>
 
 The property `access_token` should be used for all other API requests in the `Authorization` header as the Bearer token.
 
@@ -126,28 +73,12 @@ Initiate a notification with: [`POST:point-of-sale/v1/loyalty-check-in`](https:/
 When your mobile number
 is provided in `phoneNumber`, it will be pre-filled in the form.
 
-<Tabs
-defaultValue="curl"
-groupId="sdk-choice"
-values={[
-{label: 'curl', value: 'curl'},
-{label: 'Postman', value: 'postman'},
-]}>
-<TabItem value="postman">
-
-```bash
-Send request Loyalty check-in
-```
-
-</TabItem>
-<TabItem value="curl">
-
 ```bash
 curl --location 'https://apitest.vipps.no/point-of-sale/v1/loyalty-check-in' \
 -H 'Content-Type: application/json' \
 -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni <truncated>" \
 -H "Ocp-Apim-Subscription-Key: 0f14ebcab0ec4b29ae0cb90d91b4a84a" \
--H "Merchant-Serial-Number: 123456" \
+-H "Merchant-Serial-Number: YOUR-MSN" \
 -H "Vipps-System-Name: acme" \
 -H "Vipps-System-Version: 3.1.2" \
 -H "Vipps-System-Plugin-Name: acme-webshop" \
@@ -159,8 +90,6 @@ curl --location 'https://apitest.vipps.no/point-of-sale/v1/loyalty-check-in' \
 }'
 ```
 
-</TabItem>
-</Tabs>
 
 The check-in screen should show.
 

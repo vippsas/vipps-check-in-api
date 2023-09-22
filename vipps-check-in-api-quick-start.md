@@ -37,7 +37,7 @@ You will need the following values, as described in the
 
 * `client_id` - Client_id for a test sales unit.
 * `client_secret` - Client_id for a test sales unit.
-* `Ocp-Apim-Subscription-Key` - The subscription key for making API requests.
+* `Ocp-Apim-Subscription-Key` - The subscription key for a test sales unit.
 * `Merchant-Serial-Number` - The unique ID for a test sales unit.
 * `internationalMobileNumber` - The MSISDN for your Vipps MobilePay profile.
 

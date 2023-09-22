@@ -37,10 +37,10 @@ your test credentials from the merchant portal.
 You will need the following values, as described in the
 [Getting started guide](https://developer.vippsmobilepay.com/docs/getting-started):
 
-* `client_id` - Merchant key required for getting the access token.
-* `client_secret` - Merchant key required for getting the access token.
+* `client_id` - Client_id for a test sales unit.
+* `client_secret` - Client_id for a test sales unit.
 * `Ocp-Apim-Subscription-Key` - The subscription key for making API requests.
-* `merchantSerialNumber` - The unique ID for your sales unit.
+* `Merchant-Serial-Number` - The unique ID for a test sales unit.
 * `internationalMobileNumber` - The MSISDN for your Vipps MobilePay profile.
 
 ### Step 2 - Authentication

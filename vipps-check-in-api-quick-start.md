@@ -49,7 +49,7 @@ In Postman, import the following files:
 * [Check-in API Postman collection](/tools/vipps-check-in-api-postman-collection.json)
 * [Global Postman environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json)
 
-Update the *Current Value* field in your Postman environment with your own values (see
+Update the *Current Value* field in your Postman environment with your own values (for help finding your keys, see
 [API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
 
 * `client_id` - Merchant key required for getting the access token.
@@ -63,7 +63,7 @@ Update the *Current Value* field in your Postman environment with your own value
 <TabItem value="curl">
 
 
-You will need these values (for help finding them, see
+You will need these values (for help finding your keys, see
 [API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
 
 * `client_id` - Merchant key required for getting the access token.

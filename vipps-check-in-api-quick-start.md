@@ -62,7 +62,16 @@ Update the *Current Value* field in your Postman environment with your own value
 </TabItem>
 <TabItem value="curl">
 
-No setup needed :)
+
+You will need these values (for help finding them, see
+[API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
+
+* `client_id` - Merchant key required for getting the access token.
+* `client_secret` - Merchant key required for getting the access token.
+* `Ocp-Apim-Subscription-Key` - The subscription key for making API requests.
+* `merchantSerialNumber` - The unique ID for your sales unit.
+* `internationalMobileNumber` - The MSISDN for your Vipps MobilePay profile.
+* `base_url_production` - Set to: `https://api.vipps.no`.
 
 </TabItem>
 </Tabs>

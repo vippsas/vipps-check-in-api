@@ -21,7 +21,6 @@ END_METADATA -->
 ## Before you begin
 
 This document covers the quick steps for getting started with the Check-in API.
-You must have already signed up as an organization with Vipps MobilePay.
 
 **Important:** The examples use standard example values that you must change to
 use *your* values. This includes API keys, HTTP headers, reference, etc.
@@ -32,8 +31,11 @@ Be aware that these are running on the production server, <https://api.vipps.no>
 
 ### Step 1 - Setup
 
-You will need the following values (for help finding your keys, see
-[API keys](https://developer.vippsmobilepay.com/docs/common-topics/api-keys/)):
+You must have already signed up as an organization with Vipps MobilePay and have
+your test credentials from the merchant portal.
+
+You will need the following values, as described in the
+[Getting started guide](https://developer.vippsmobilepay.com/docs/getting-started):
 
 * `client_id` - Merchant key required for getting the access token.
 * `client_secret` - Merchant key required for getting the access token.
@@ -89,7 +91,6 @@ curl --location 'https://apitest.vipps.no/point-of-sale/v1/loyalty-check-in' \
   "isMember": true
 }'
 ```
-
 
 The check-in screen should show.
 

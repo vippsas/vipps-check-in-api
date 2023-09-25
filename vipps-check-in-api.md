@@ -13,6 +13,8 @@ END_METADATA -->
 
 ![Vipps](./images/vipps.png) *Only available for Vipps.*
 
+![MobilePay](./images/mp.png) *To be determined.*
+
 The Check-in API enables you to send a message to the customer's Vipps app.
 This is currently only used to alert a user that they are already a member of a loyalty program.
 

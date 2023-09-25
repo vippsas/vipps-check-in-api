@@ -20,7 +20,7 @@ END_METADATA -->
 
 ## Before you begin
 
-The provided example values in this guide must be changed with the values for your test sales unit and user.
+The provided example values in this guide must be changed with the values for your sales unit and user.
 This applies for API keys, HTTP headers, reference, phone number, etc.
 
 ## Your first check-in notification

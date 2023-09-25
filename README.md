@@ -14,7 +14,7 @@ END_METADATA -->
 
 ![Vipps](./images/vipps.png) *Only available for Vipps.*
 
-![MobilePay](../images/mp.png) *To be determined.*
+![MobilePay](./images/mp.png) *To be determined.*
 
 The Check-in API allows you to communicate with users through their Vipps app from the Point of Sale (POS).
 For example, a user can scan their personal Vipps QR code and be informed if they are a member of a company's loyalty program.

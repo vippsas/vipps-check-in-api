@@ -14,7 +14,7 @@ END_METADATA -->
 
 ## Endpoints to integrate
 
-Integrate the [API endpoint](https://developer.vippsmobilepay.com/api/check-in/). For examples of requests and responses, see the [Postman collection](/tools/vipps-check-in-api-postman-collection.json) and [environment](https://github.com/vippsas/vipps-developers/blob/master/tools/vipps-api-global-postman-environment.json).
+Integrate the [API endpoint](https://developer.vippsmobilepay.com/api/check-in/). For examples of requests and responses, see the [Quick start guide](vipps-check-in-api-quick-start.md).
 
 | Endpoint | Comment |
 |-----|-----------|

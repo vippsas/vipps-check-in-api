@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Vipps Check-in API
+  title: Check-in API
   version: 1.0.2
   description: >-
     API to communicate with users in a physical point of sale context.

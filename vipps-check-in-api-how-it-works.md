@@ -12,7 +12,7 @@ END_METADATA -->
 # How the Check-in API works
 
 To get an impression of how the check-in functionality looks and feels, check out the member flow in the
-[demoshop](https://demo.vipps.no/member-flow).
+[demo shop](https://demo.vipps.no/member-flow).
 
 ## Step 1: Scan the QR code
 
@@ -27,6 +27,6 @@ The flow begins with the customer presenting their personal Vipps QR code to the
 
 The customer's membership status is checked by using the mobile number received in the last step.
 
-A Vipps Check-in API request is triggered to inform the customer whether or not they are a member of your loyalty program. This will help them through the payment process.
+A Check-in API request is triggered to inform the customer whether or not they are a member of your loyalty program. This will help them through the payment process.
 
 ![Loyalty Flow](images/pos-step-2.png)

@@ -69,7 +69,7 @@ Open your Vipps app to be able to see the notification.
 
 ### Step 4 - Your Check-in notification
 
-Initiate a notification with: [`POST:point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn).
+Initiate a notification with: [`POST:/point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn).
 When your mobile number
 is provided in `phoneNumber`, it will be pre-filled in the form.
 

@@ -32,7 +32,7 @@ Here is how it will look for the user. The merchant's logo will also show here.
 ![Loyalty Flow](images/loyalty_check_in_1.png)
 
 Send the
-[`POST:point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
+[`POST:/point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn)
 request to show the check-in screen in the user's Vipps app.
 
 Headers:

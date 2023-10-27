@@ -78,7 +78,7 @@ The CIBA flow will send a push to the user, and once the user has finished the f
 
 ![Loyalty Flow](images/POS_step_3.png)
 
-See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/user-initiated-login-howitworks//) for a detailed example.
+See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/user-initiated-login-howitworks/) for a detailed example.
 
 ## Merchant enrollment
 

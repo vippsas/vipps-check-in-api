@@ -72,13 +72,13 @@ If the customer is not a member of the loyalty program, you can request to enrol
 [Login API](https://developer.vippsmobilepay.com/docs/APIs/login-api).
 
 Trigger a
-[Login flow](https://developer.vippsmobilepay.com/docs/APIs/login-api/api-guide/flows/phone-number-ciba-flows)
+[Login flow](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/merchant-initiated-login-howitworks/)
 to gather consent from the customer.
 The CIBA flow will send a push to the user, and once the user has finished the flow, the customer will be enrolled in the loyalty program.
 
 ![Loyalty Flow](images/POS_step_3.png)
 
-See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/vipps-login-from-phone-number-api-howitworks/) for a detailed example.
+See [Log in with phone number](https://developer.vippsmobilepay.com/docs/APIs/login-api/how-it-works/user-initiated-login-howitworks/) for a detailed example.
 
 ## Merchant enrollment
 

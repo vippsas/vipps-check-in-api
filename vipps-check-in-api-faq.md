@@ -13,7 +13,7 @@ END_METADATA -->
 # Frequently asked questions
 
 For general information and questions, please check in the
-[Knowledge base](https://developer.vippsmobilepay.com/docs/common-topics/).
+[Knowledge base](https://developer.vippsmobilepay.com/docs/knowledge-base/).
 
 ## Can I use Check-in in the Merchant Test (MT) environment?
 

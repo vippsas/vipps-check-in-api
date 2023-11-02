@@ -25,7 +25,7 @@ This applies for API keys, HTTP headers, reference, phone number, etc.
 
 ## Your first check-in notification
 
-Be aware that these are running on the production server, <https://api.vipps.no>.
+Be aware that these are running on the production server, [https://api.vipps.no](https://api.vipps.no).
 
 ### Step 1 - Setup
 

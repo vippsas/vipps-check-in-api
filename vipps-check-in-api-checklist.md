@@ -20,6 +20,13 @@ Integrate the [API endpoint](https://developer.vippsmobilepay.com/api/check-in/)
 |-----|-----------|
 |     Initiate check-in session | [`POST:/point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in/#tag/Loyalty-check-in/operation/initiateLoyaltyCheckIn) |
 
+When the checklist is completed, notify Vipps MobilePay Integration Service
+at [developer@vippsmobilepay.com](mailto:developer@vippsmobilepay.com).
+Include examples from the test environment, pilot customer info, and a description of the implemented solution.
+
+We will verify the integration and contact you.
+After the checklist is approved, we'll send you the information you need to get started.
+
 ## Quality assurance
 
 | Action | Comment |

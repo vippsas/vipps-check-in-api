@@ -71,7 +71,7 @@ Open your Vipps app to be able to see the notification.
 
 Initiate a notification with: [`POST:/point-of-sale/v1/loyalty-check-in`](https://developer.vippsmobilepay.com/api/check-in#tag/point-of-sale/operation/initiateLoyaltyCheckIn).
 When your mobile number
-is provided in `phoneNumber`, it will be pre-filled in the form.
+is provided in `phoneNumber`, it will be prefilled in the form.
 
 ```bash
 curl --location 'https://apitest.vipps.no/point-of-sale/v1/loyalty-check-in' \
